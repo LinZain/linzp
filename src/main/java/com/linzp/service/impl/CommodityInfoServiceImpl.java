@@ -34,4 +34,9 @@ public class CommodityInfoServiceImpl implements CommodityInfoService {
 
     }
 
+    @Override
+    public List<StuInfoRole> queryListByType(String type) {
+        return studentInfoDao.queryListByType(type);
+    }
+
 }

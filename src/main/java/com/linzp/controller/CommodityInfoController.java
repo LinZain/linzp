@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.linzp.entity.StuInfoRole;
 import com.linzp.service.CommodityInfoService;
@@ -18,31 +19,55 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 @Controller
-public class CommodityInfoController{
+public class CommodityInfoController {
     @Autowired
     CommodityInfoService studentInfoService;
-    
-    @RequestMapping(value="/stuInfo")
-    public String queryStuInfo(HttpServletRequest request, HttpServletResponse response) throws IOException{
+
+    @RequestMapping(value = { "/stuInfo" }, method = { RequestMethod.POST })
+    public String queryList(HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject jsonObject = new JSONObject();
         JSONArray jsonArray = new JSONArray();
-        
+
         List<StuInfoRole> list = studentInfoService.queryList();
-        if(null == list || list.isEmpty()){
+        if (null == list || list.isEmpty()) {
             return null;
-        }else{
+        } else {
             for (StuInfoRole role : list) {
                 jsonArray.add(role);
             }
             jsonObject.put("rows", jsonArray);
         }
-        
-        response.setCharacterEncoding("UTF-8");  
-        response.setContentType("text/html; charset=utf-8");  
-        PrintWriter out = response.getWriter();  
-        out.print(jsonObject.toString());  
-        out.flush();  
-        out.close(); 
-        return "../index";
+
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=utf-8");
+        PrintWriter out = response.getWriter();
+        out.print(jsonObject.toString());
+        out.flush();
+        out.close();
+        return "commodity/commodityInfo.jsp";
+    }
+
+    @RequestMapping(value = { "/stuInfoByType" }, method = { RequestMethod.POST })
+    public String queryListByType(String type, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+
+        List<StuInfoRole> list = studentInfoService.queryList();
+        if (null == list || list.isEmpty()) {
+            return null;
+        } else {
+            for (StuInfoRole role : list) {
+                jsonArray.add(role);
+            }
+            jsonObject.put("rows", jsonArray);
+        }
+
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=utf-8");
+        PrintWriter out = response.getWriter();
+        out.print(jsonObject.toString());
+        out.flush();
+        out.close();
+        return "commodity/commodityInfo.jsp";
     }
 }

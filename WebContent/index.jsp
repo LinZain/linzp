@@ -13,79 +13,22 @@
 	layui.use('element', function() {
 		var element = layui.element;
 	});
-
-	$(document).ready(function() {
-		queryStuInfo();
-	});
-
-	function queryStuInfo() {
-		$.ajax({
-			type : "post",
-			url : "${pageContext.request.contextPath}/stuInfo",
-			dataType : "json",
-			success : function(json) {
-				gril = eval(json.rows);
-				var str = "";
-				for (i in gril) {
-					str += "<tr>" + "<td>" + gril[i].stuNO + "</td>" + "<td>"
-							+ gril[i].stuName + "</td>" + "<td>"
-							+ gril[i].stuSex + "</td>" + "</tr>";
-				}
-				$("#stuInfoTable").html(str);
-			},
-			error : function() {
-				$("#stuInfoTable").html("<td>未查询到结果</td>");
-			}
-		});
-	}
 </script>
-<body>
-	<div>
-		<ul class="layui-nav" lay-filter="">
-			<li class="layui-nav-item"><a href="">最新活动</a></li>
-			<li class="layui-nav-item"><a href="">产品</a></li>
-			<li class="layui-nav-item"><a href="">大数据</a></li>
-			<li class="layui-nav-item"><a href="javascript:;">解决方案</a>
-				<dl class="layui-nav-child">
-					<dd>
-						<a href="">移动模块</a>
-					</dd>
-					<dd>
-						<a href="">后台模版</a>
-					</dd>
-					<dd>
-						<a href="">电商平台</a>
-					</dd>
-				</dl></li>
-			<li class="layui-nav-item"><a href="">社区</a></li>
-		</ul>
-	</div>
-	<div class="layui-tab layui-tab-brief">
-		<ul class="layui-tab-title">
-			<li>网站设置</li>
-			<li>用户管理</li>
-			<li>权限分配</li>
-			<li>商品管理</li>
-			<li>订单管理</li>
-		</ul>
-		<div class="layui-tab-content">
-			<div class="layui-tab-item">内容2</div>
-			<div class="layui-tab-item">内容3</div>
-			<div class="layui-tab-item">内容4</div>
-			<div class="layui-tab-item">内容5</div>
-
-			<div class="layui-tab-item">
-				<table class="layui-table">
-					<thead>
-						<tr>
-							<th>学号</th>
-							<th>姓名</th>
-							<th>性别</th>
-						</tr>
-					</thead>
-					<tbody id="stuInfoTable"></tbody>
-				</table>
-			</div>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!-- 头部区域（可配合layui已有的水平导航） -->
+		<div class="layui-header">
+			<div class="layui-logo">BOLL6电商管理系统</div>
+			<ul class="layui-nav layui-layout-right">
+				<li class="layui-nav-item"><a href="javascript:;"><img
+						src="http://t.cn/RCzsdCq" class="layui-nav-img">Zain</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="">基本资料</a>
+						</dd>
+					</dl></li>
+				<li class="layui-nav-item"><a href="">注销</a></li>
+			</ul>
 		</div>
 	</div>
 </body>
