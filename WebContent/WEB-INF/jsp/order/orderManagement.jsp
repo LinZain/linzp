@@ -11,36 +11,53 @@
 <title>Insert title here</title>
 </head>
 <script type="text/javascript" charset="UTF-8">
-	layui.use('element', function() {
-		var element = layui.element;
+	layui
+			.use(
+					[ 'form', 'element', 'table' ],
+					function() {
+						var element = layui.element, layer = layui.layer, form = layui.form, table = layui.table;
+					});
+
+	table.render({
+		elem : '#demo',
+		height : 315,
+		url: './order/orderTable',
+		page : true,
+		cols : [ [ //表头
+		{
+			field : 'stuNO',
+			title : '学号',
+			width : 200,
+			sort : true,
+			fixed : 'left'
+		}, {
+			field : 'stuName',
+			title : '姓名',
+			width : 200
+		}, {
+			field : 'stuSex',
+			title : '性别',
+			width : 200,
+			sort : true
+		} ] ]
 	});
 
-	function queryStuInfo() {
-		$.ajax({
-			type : "post",
-			url : "${pageContext.request.contextPath}/stuInfo",
-			dataType : "json",
-			success : function(json) {
-				gril = eval(json.rows);
-				var str = "";
-				for (i in gril) {
-					str += "<tr>" + "<td>" + gril[i].stuNO + "</td>" + "<td>"
-							+ gril[i].stuName + "</td>" + "<td>"
-							+ gril[i].stuSex + "</td>" + "</tr>";
-				}
-				$("#commodityManagementTable").html(str);
-			},
-			error : function() {
-				$("#commodityManagementTable").html("<td>未查询到结果</td>");
-			}
+	function query() {
+		var select;
+		form.on('select(aihao)', function(data) {
+			select = data.value; //得到美化后的DOM对象
 		});
+		alert(select);
 	}
 </script>
 <body class="layui-layout-body">
 	<div class="layui-layout layui-layout-admin">
 		<!-- 头部区域（可配合layui已有的水平导航） -->
 		<div class="layui-header">
-			<div class="layui-logo">BOLL6电商管理系统</div>
+			<div class="layui-logo">
+				<a href="javascript:change('./change','index')"
+					style="color: white;">BOLL6电商管理系统</a>
+			</div>
 			<ul class="layui-nav layui-layout-left">
 				<li class="layui-nav-item"><a
 					href="javascript:change('./change','commodity/commodityList')">商品列表</a></li>
@@ -75,34 +92,36 @@
 				<li class="layui-nav-item"><a href="">注销</a></li>
 			</ul>
 		</div>
-
-		<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-		<div class="layui-side layui-bg-black">
-			<div class="layui-side-scroll">
-				<ul class="layui-nav layui-nav-tree" lay-filter="test">
-					<li class="layui-nav-item"><a class="" href="javascript:;">商品导航</a>
-						<dl class="layui-nav-child">
-							<dd>
-								<a href="javascript:;">一层主题</a>
-							</dd>
-							<dd>
-								<a href="javascript:;">二层主题</a>
-							</dd>
-						</dl>
-					</li>
-					<li class="layui-nav-item"><a class="" href="javascript:;">商品标签</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="layui-body">
-			<table class="layui-table">
-				<thead>
-					<tr>
-						<th>学号</th>
-						<th>姓名</th>
-						<th>性别</th>
-					</tr>
-				</thead>
+		<br>
+		<div>
+			<form class="layui-form layui-form-pane" action="./order/queryOrder" method="post">
+				<div class="layui-form-item">
+					<div class="layui-inline">
+						<div class="layui-input-inline">
+							<input type="text" name="keyWord" lay-verify="required"
+								placeholder="请输入关键字" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">单行选择框</label>
+						<div class="layui-input-block">
+							<select name="type" lay-filter="aihao">
+								<option value="">请选择类型</option>
+								<option value="0">写作</option>
+								<option value="1">阅读</option>
+								<option value="2">游戏</option>
+								<option value="3">音乐</option>
+								<option value="4">旅行</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-inline">
+						<button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>
+			<table class="layui-table" id="demo">
 				<tbody id="commodityManagementTable"></tbody>
 			</table>
 		</div>

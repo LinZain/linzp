@@ -40,7 +40,9 @@
 	<div class="layui-layout layui-layout-admin">
 		<!-- 头部区域（可配合layui已有的水平导航） -->
 		<div class="layui-header">
-			<div class="layui-logo">BOLL6电商管理系统</div>
+			<div class="layui-logo">
+				<a href="javascript:change('./change','index')" style="color: white;">BOLL6电商管理系统</a>
+			</div>
 			<ul class="layui-nav layui-layout-left">
 				<li class="layui-nav-item"><a
 					href="javascript:change('./change','commodity/commodityList')">商品列表</a></li>
@@ -88,8 +90,7 @@
 							<dd>
 								<a href="javascript:;">二层主题</a>
 							</dd>
-						</dl>
-					</li>
+						</dl></li>
 					<li class="layui-nav-item"><a class="" href="javascript:;">商品标签</a></li>
 				</ul>
 			</div>
