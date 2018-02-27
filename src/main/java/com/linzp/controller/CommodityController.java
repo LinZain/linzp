@@ -47,6 +47,7 @@ public class CommodityController {
         out.print(jsonObject.toString());
         out.flush();
         out.close();
-        return "jsp/commodity/commodityList";
+        return "commodity/commodityList";
     }
+    
 }

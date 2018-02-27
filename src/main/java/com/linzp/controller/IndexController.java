@@ -19,6 +19,6 @@ public class IndexController {
 
     @RequestMapping(value = { "/change" }, method = { RequestMethod.POST })
     private String login(String url, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        return "jsp/"+url;
+        return url;
     }
 }

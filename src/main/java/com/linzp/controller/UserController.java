@@ -17,6 +17,6 @@ public class UserController {
 
     @RequestMapping(value = { "/login" }, method = { RequestMethod.POST })
     private String login(String name, String pwd, HttpServletRequest request, HttpServletResponse response) {
-        return "jsp/index";
+        return "index";
     }
 }

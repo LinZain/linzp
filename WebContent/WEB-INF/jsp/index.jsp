@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="./layui/css/layui.css" media="all">
-<script type="text/javascript" src="./layui/layui.js"></script>
-<script type="text/javascript" src="./js/jquery/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="./plugin/layui/css/layui.css" media="all">
+<script type="text/javascript" src="./plugin/layui/layui.js"></script>
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="./js/jsp/index.js"></script>
 <title>Insert title here</title>
 </head>

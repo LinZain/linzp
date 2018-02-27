@@ -4,50 +4,61 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="./layui/css/layui.css">
-<script type="text/javascript" src="./layui/layui.js"></script>
-<script type="text/javascript" src="./js/jquery/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="./plugin/layui/css/layui.css">
+<script type="text/javascript" src="./plugin/layui/layui.js"></script>
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="./js/jsp/index.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript"
+	src="./plugin/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript"
+	src="./plugin/bootstrap-table/bootstrap-table.min.js"></script>
 <title>Insert title here</title>
 </head>
 <script type="text/javascript" charset="UTF-8">
-	layui
-			.use(
-					[ 'form', 'element', 'table' ],
-					function() {
-						var element = layui.element, layer = layui.layer, form = layui.form, table = layui.table;
-					});
-
-	table.render({
-		elem : '#demo',
-		height : 315,
-		url: './order/orderTable',
-		page : true,
-		cols : [ [ //表头
-		{
-			field : 'stuNO',
-			title : '学号',
-			width : 200,
-			sort : true,
-			fixed : 'left'
-		}, {
-			field : 'stuName',
-			title : '姓名',
-			width : 200
-		}, {
-			field : 'stuSex',
-			title : '性别',
-			width : 200,
-			sort : true
-		} ] ]
+	layui.use([ 'form', 'table' ], function() {
+		var layer = layui.layer, form = layui.form;
 	});
 
-	function query() {
-		var select;
-		form.on('select(aihao)', function(data) {
-			select = data.value; //得到美化后的DOM对象
-		});
-		alert(select);
+	function queryFunc() {
+		
+	$('#commodityManagementTable').bootstrapTable({
+		columns : [ {
+			field : 'stuName',
+			halign : 'center',
+			align : 'center',
+			title : '学生姓名'
+		}, {
+			field : 'stuNO',
+			halign : 'center',
+			align : 'center',
+			title : '学生学号',
+		}, {
+			field : 'stuSex',
+			halign : 'center',
+			align : 'center',
+			title : '学生性别',
+		} ],
+		classes : 'table table-hover',
+		sortOrder : 'asc',
+		pagination : true,
+		sidePagination : 'server',
+		clickToSelect : true,
+		pageNumber : 1,
+		pageSize : 10,
+		pageList : [ 10, 20 ],
+		method : 'post',
+		cache : false,
+		queryParamsType : '',
+		queryParams : function(params) {
+			console.info(params);
+			console.info($("#keyWord").data("value"));
+			return {
+				stuName : $('#keyWord').data('value')
+			}
+		},
+		url : './order/queryOrder'
+	});
 	}
 </script>
 <body class="layui-layout-body">
@@ -94,18 +105,18 @@
 		</div>
 		<br>
 		<div>
-			<form class="layui-form layui-form-pane" action="./order/queryOrder" method="post">
+			<form class="layui-form layui-form-pane">
 				<div class="layui-form-item">
 					<div class="layui-inline">
 						<div class="layui-input-inline">
-							<input type="text" name="keyWord" lay-verify="required"
-								placeholder="请输入关键字" autocomplete="off" class="layui-input">
+							<input type="text" id="keyWord" 
+								placeholder="请输入关键字"  class="layui-input">
 						</div>
 					</div>
 					<div class="layui-inline">
 						<label class="layui-form-label">单行选择框</label>
 						<div class="layui-input-block">
-							<select name="type" lay-filter="aihao">
+							<select name="type" lay-filter="aihao" id="aihao">
 								<option value="">请选择类型</option>
 								<option value="0">写作</option>
 								<option value="1">阅读</option>
@@ -116,13 +127,13 @@
 						</div>
 					</div>
 					<div class="layui-inline">
-						<button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+						<button id="queryOrder" class="layui-btn" lay-submit type="button"
+							onclick="queryFunc()">搜索</button>
 						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 					</div>
 				</div>
 			</form>
-			<table class="layui-table" id="demo">
-				<tbody id="commodityManagementTable"></tbody>
+			<table class="layui-table" id="commodityManagementTable">
 			</table>
 		</div>
 	</div>

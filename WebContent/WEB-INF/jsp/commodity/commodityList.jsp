@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="./layui/css/layui.css">
 <script type="text/javascript" src="./layui/layui.js"></script>
-<script type="text/javascript" src="./js/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="./js/jsp/index.js"></script>
 <title>Insert title here</title>
 </head>
