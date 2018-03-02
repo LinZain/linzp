@@ -4,10 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="./layui/css/layui.css">
-<script type="text/javascript" src="./layui/layui.js"></script>
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./js/jsp/index.js"></script>
+<jsp:include page="../js_inc.jsp"></jsp:include>
 <title>Insert title here</title>
 </head>
 <script type="text/javascript" charset="UTF-8">
@@ -90,47 +87,47 @@
 			<div class="layui-side-scroll">
 				<ul class="layui-nav layui-nav-tree" lay-filter="test">
 					<li class="layui-nav-item"><a class=""
-						href="javascript:queryCommodity(null)">所有商品</a></li>
+						href="javascript:queryCommodity('')">所有商品</a></li>
 					<li class="layui-nav-item"><a class="" href="javascript:;">新潮热款</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:queryCommodity(Jan)">一月</a>
+								<a href="javascript:queryCommodity('Jan')">一月</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity(Feb)">二月</a>
+								<a href="javascript:queryCommodity('Feb')">二月</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity(March)">三月</a>
+								<a href="javascript:queryCommodity('March')">三月</a>
 							</dd>
 						</dl></li>
 					<li class="layui-nav-item"><a class="" href="javascript:;">上装</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:queryCommodity(Hoodie)">卫衣</a>
+								<a href="javascript:queryCommodity('Hoodie')">卫衣</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity(Jacket)">夹克</a>
+								<a href="javascript:queryCommodity('Jacket')">夹克</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity(Coat)">大衣</a>
+								<a href="javascript:queryCommodity('Coat')">大衣</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity(DownCoat)">羽绒服</a>
+								<a href="javascript:queryCommodity('DownCoat')">羽绒服</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity(Tshirt)">T恤</a>
+								<a href="javascript:queryCommodity('Tshirt')">T恤</a>
 							</dd>
 						</dl></li>
 					<li class="layui-nav-item"><a class="" href="javascript:;">下装</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:queryCommodity(Sweatpants)">运动裤</a>
+								<a href="javascript:queryCommodity('Sweatpants')">运动裤</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity(Casualpants)">休闲裤</a>
+								<a href="javascript:queryCommodity('Casualpants')">休闲裤</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity(Jeans)">牛仔裤</a>
+								<a href="javascript:queryCommodity('Jeans')">牛仔裤</a>
 							</dd>
 						</dl></li>
 				</ul>

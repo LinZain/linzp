@@ -4,10 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="./layui/css/layui.css">
-<script type="text/javascript" src="./layui/layui.js"></script>
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./js/jsp/index.js"></script>
+<jsp:include page="../js_inc.jsp"></jsp:include>
 <title>Insert title here</title>
 </head>
 <script type="text/javascript" charset="UTF-8">

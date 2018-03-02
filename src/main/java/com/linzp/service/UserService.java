@@ -1,5 +1,7 @@
 package com.linzp.service;
 
+import com.linzp.entity.StuInfoRole;
+
 public interface UserService {
-    public boolean login(String name, String pwd);
+    public StuInfoRole login(String name, String pwd);
 }

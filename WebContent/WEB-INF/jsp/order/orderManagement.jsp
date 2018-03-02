@@ -4,61 +4,78 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="./plugin/layui/css/layui.css">
-<script type="text/javascript" src="./plugin/layui/layui.js"></script>
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./js/jsp/index.js"></script>
-<script type="text/javascript" src="./js/bootstrap.min.js"></script>
-<script type="text/javascript"
-	src="./plugin/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
-<script type="text/javascript"
-	src="./plugin/bootstrap-table/bootstrap-table.min.js"></script>
+
 <title>Insert title here</title>
 </head>
+
+<jsp:include page="../js_inc.jsp"></jsp:include>
+
 <script type="text/javascript" charset="UTF-8">
-	layui.use([ 'form', 'table' ], function() {
+	layui.use([ 'form' ], function() {
 		var layer = layui.layer, form = layui.form;
 	});
 
 	function queryFunc() {
-		
-	$('#commodityManagementTable').bootstrapTable({
-		columns : [ {
-			field : 'stuName',
-			halign : 'center',
-			align : 'center',
-			title : '学生姓名'
-		}, {
-			field : 'stuNO',
-			halign : 'center',
-			align : 'center',
-			title : '学生学号',
-		}, {
-			field : 'stuSex',
-			halign : 'center',
-			align : 'center',
-			title : '学生性别',
-		} ],
-		classes : 'table table-hover',
-		sortOrder : 'asc',
-		pagination : true,
-		sidePagination : 'server',
-		clickToSelect : true,
-		pageNumber : 1,
-		pageSize : 10,
-		pageList : [ 10, 20 ],
-		method : 'post',
-		cache : false,
-		queryParamsType : '',
-		queryParams : function(params) {
-			console.info(params);
-			console.info($("#keyWord").data("value"));
-			return {
-				stuName : $('#keyWord').data('value')
-			}
-		},
-		url : './order/queryOrder'
-	});
+		tableInit();
+	}
+	function tableInit() {
+		$("#commodityManagementTable").bootstrapTable('destroy'); 
+		$('#commodityManagementTable')
+				.bootstrapTable(
+						{
+							ajax : function(request) {
+								$
+										.ajax({
+											type : "post",
+											url : "${pageContext.request.contextPath}/order/queryOrder",
+											data : {
+												type : $('#keyWord').val()
+											},
+											dataType : "json",
+											cache : false,
+											success : function(msg) {
+												request.success({
+													row : msg
+												});
+												$('#commodityManagementTable')
+														.bootstrapTable('load',
+																msg);
+											},
+											error : function() {
+												alert("错误");
+											}
+										});
+							},
+							columns : [ {
+								field : 'stuName',
+								halign : 'center',
+								align : 'center',
+								title : '学生姓名'
+							}, {
+								field : 'stuNO',
+								halign : 'center',
+								align : 'center',
+								title : '学生学号',
+							}, {
+								field : 'stuSex',
+								halign : 'center',
+								align : 'center',
+								title : '学生性别',
+							} ],
+							classes : 'table table-hover',
+							sortOrder : 'asc',
+							pagination : true,
+							sidePagination : 'server',
+							clickToSelect : true,
+							pageNumber : 1,
+							pageSize : 10,
+							pageList : [ 10, 20 ],
+							cache : false
+						});
+	}
+
+	function testButton() {
+		alert("test");
 	}
 </script>
 <body class="layui-layout-body">
@@ -109,8 +126,8 @@
 				<div class="layui-form-item">
 					<div class="layui-inline">
 						<div class="layui-input-inline">
-							<input type="text" id="keyWord" 
-								placeholder="请输入关键字"  class="layui-input">
+							<input type="text" id="keyWord" placeholder="请输入关键字"
+								class="layui-input">
 						</div>
 					</div>
 					<div class="layui-inline">
@@ -127,14 +144,13 @@
 						</div>
 					</div>
 					<div class="layui-inline">
-						<button id="queryOrder" class="layui-btn" lay-submit type="button"
-							onclick="queryFunc()">搜索</button>
+						<button id="queryOrder"class="layui-btn"  type="button" onclick="queryFunc()">搜索</button>
 						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 					</div>
 				</div>
+				<table class="table table-striped" id="commodityManagementTable">
+				</table>
 			</form>
-			<table class="layui-table" id="commodityManagementTable">
-			</table>
 		</div>
 	</div>
 </body>
