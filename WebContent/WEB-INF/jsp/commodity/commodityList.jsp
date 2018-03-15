@@ -91,43 +91,43 @@
 					<li class="layui-nav-item"><a class="" href="javascript:;">新潮热款</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:queryCommodity('Jan')">一月</a>
+								<a href="javascript:;">一月</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity('Feb')">二月</a>
+								<a href="javascript:;">二月</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity('March')">三月</a>
+								<a href="javascript:;">三月</a>
 							</dd>
 						</dl></li>
 					<li class="layui-nav-item"><a class="" href="javascript:;">上装</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:queryCommodity('Hoodie')">卫衣</a>
+								<a href="javascript:;">卫衣</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity('Jacket')">夹克</a>
+								<a href="javascript:;">夹克</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity('Coat')">大衣</a>
+								<a href="javascript:;">大衣</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity('DownCoat')">羽绒服</a>
+								<a href="javascript:;">羽绒服</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity('Tshirt')">T恤</a>
+								<a href="javascript:;">T恤</a>
 							</dd>
 						</dl></li>
 					<li class="layui-nav-item"><a class="" href="javascript:;">下装</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:queryCommodity('Sweatpants')">运动裤</a>
+								<a href="javascript:;">运动裤</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity('Casualpants')">休闲裤</a>
+								<a href="javascript:;">休闲裤</a>
 							</dd>
 							<dd>
-								<a href="javascript:queryCommodity('Jeans')">牛仔裤</a>
+								<a href="javascript:;">牛仔裤</a>
 							</dd>
 						</dl></li>
 				</ul>
