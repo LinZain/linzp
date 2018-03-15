@@ -1,1 +1,1 @@
-mvn clean install -DskipTests
+mvn7 clean install -DskipTests
