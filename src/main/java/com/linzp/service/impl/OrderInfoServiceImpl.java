@@ -7,13 +7,15 @@ import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.linzp.dao.BaseDaoI;
 import com.linzp.entity.StuInfoRole;
-import com.linzp.service.CommodityInfoService;
+import com.linzp.service.OrderInfoService;
 
-@Service("studentInfoService")
-public class CommodityInfoServiceImpl implements CommodityInfoService {
+@Service("orderInfoService")
+@Transactional
+public class OrderInfoServiceImpl implements OrderInfoService {
     @Autowired
     private BaseDaoI<StuInfoRole> execOrderDAO;
 
@@ -21,8 +23,17 @@ public class CommodityInfoServiceImpl implements CommodityInfoService {
     public List<StuInfoRole> queryList(StuInfoRole role) {
         String hql = "from StuInfoRole ";
         Map<String, Object> params = new HashMap<String, Object>();
-        List<StuInfoRole> list = execOrderDAO.find(hql + whereHql(new StuInfoRole(), params), params);
+        List<StuInfoRole> list = execOrderDAO.find(hql + whereHql(role, params),params);
         return list;
+    }
+
+    @Override
+    public Long getListCount(StuInfoRole role) {
+        Map<String, Object> params = new HashMap<String, Object>();
+        StringBuilder hql = new StringBuilder("select count(*) from StuInfoRole ");
+        hql.append(whereHql(role, params));
+        Long total = execOrderDAO.count(hql.toString(), params);
+        return total;
     }
 
     private String whereHql(StuInfoRole role, Map<String, Object> params) {
@@ -43,15 +54,6 @@ public class CommodityInfoServiceImpl implements CommodityInfoService {
             }
         }
         return hql.toString();
-    }
-
-    @Override
-    public Long getListCount(StuInfoRole role) {
-        Map<String, Object> params = new HashMap<String, Object>();
-        StringBuilder hql = new StringBuilder("select count(*) from StuInfoRole ");
-        hql.append(whereHql(role, params));
-        Long total = execOrderDAO.count(hql.toString(), params);
-        return total;
     }
 
 }

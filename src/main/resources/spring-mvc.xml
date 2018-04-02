@@ -13,10 +13,9 @@
             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<mvc:annotation-driven />
-	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-	<context:component-scan base-package="com.linzp" />
+	<context:component-scan base-package="com.linzp.controller" />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-		p:prefix="/WEB-INF/" p:suffix=".jsp" >
+		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp">
 	</bean>
 </beans>
