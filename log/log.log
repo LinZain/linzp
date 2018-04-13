@@ -6538,3 +6538,632 @@ java.io.FileNotFoundException: HOCON lib (typesafe-config) is not available. Als
 2018-03-26 09:46:56,892 DEBUG [RequestMappingHandlerMapping] Did not find handler method for [/]
 2018-03-26 09:46:56,893 WARN  [PageNotFound] No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'SpringMVC'
 2018-03-26 09:46:56,894 DEBUG [DispatcherServlet] Successfully completed request
+2018-04-13 09:30:28,408 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:30:28,421 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:30:28,422 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:30:28,439 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:30:28,441 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:30:28,443 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:30:28,444 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:49744<->127.0.0.1:8080
+2018-04-13 09:30:28,444 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:30:28,444 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:30:28,445 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:30:28,446 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:30:28,446 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:30:28,446 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:30:28,446 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:30:28,446 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:30:28,446 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:30:28,446 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:30:28,446 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:30:28,446 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:30:28,446 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:30:28,446 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:30:28,521 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+2018-04-13 09:30:28,521 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:30:28,521 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:30:28,521 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:30:28,521 DEBUG [wire] http-outgoing-0 << "Content-Length: 1078[\r][\n]"
+2018-04-13 09:30:28,521 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:30:28 GMT[\r][\n]"
+2018-04-13 09:30:28,521 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:30:28,524 DEBUG [headers] http-outgoing-0 << HTTP/1.1 404 Not Found
+2018-04-13 09:30:28,524 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:30:28,525 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:30:28,525 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:30:28,525 DEBUG [headers] http-outgoing-0 << Content-Length: 1078
+2018-04-13 09:30:28,525 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:30:28 GMT
+2018-04-13 09:30:28,528 DEBUG [MainClientExec] Connection can be kept alive indefinitely
+2018-04-13 09:30:28,533 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 404 - /commodity-management/WEB-INF/jsp/error.jsp</h1><div class="line"></div><p><b>type</b> Status report</p><p><b>message</b> <u>/commodity-management/WEB-INF/jsp/error.jsp</u></p><p><b>description</b> <u>The requested resource is not available.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:30:28,533 DEBUG [PoolingHttpClientConnectionManager] Connection [id: 0][route: {}->http://127.0.0.1:8080] can be kept alive indefinitely
+2018-04-13 09:30:28,533 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 1; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:31:14,014 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:31:14,026 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:31:14,027 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:31:14,047 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:31:14,049 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:31:14,051 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:31:14,052 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:49772<->127.0.0.1:8080
+2018-04-13 09:31:14,052 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:31:14,052 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:31:14,053 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:31:14,054 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:31:14,054 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:31:14,054 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:31:14,054 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:31:14,054 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:31:14,054 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:31:14,054 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:31:14,054 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:31:14,054 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:31:14,054 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:31:14,054 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:31:14,115 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+2018-04-13 09:31:14,115 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:31:14,115 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:31:14,115 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:31:14,115 DEBUG [wire] http-outgoing-0 << "Content-Length: 1078[\r][\n]"
+2018-04-13 09:31:14,115 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:31:14 GMT[\r][\n]"
+2018-04-13 09:31:14,115 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:31:14,117 DEBUG [headers] http-outgoing-0 << HTTP/1.1 404 Not Found
+2018-04-13 09:31:14,117 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:31:14,117 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:31:14,117 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:31:14,117 DEBUG [headers] http-outgoing-0 << Content-Length: 1078
+2018-04-13 09:31:14,118 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:31:14 GMT
+2018-04-13 09:31:14,121 DEBUG [MainClientExec] Connection can be kept alive indefinitely
+2018-04-13 09:31:14,126 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 404 - /commodity-management/WEB-INF/jsp/error.jsp</h1><div class="line"></div><p><b>type</b> Status report</p><p><b>message</b> <u>/commodity-management/WEB-INF/jsp/error.jsp</u></p><p><b>description</b> <u>The requested resource is not available.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:31:14,126 DEBUG [PoolingHttpClientConnectionManager] Connection [id: 0][route: {}->http://127.0.0.1:8080] can be kept alive indefinitely
+2018-04-13 09:31:14,126 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 1; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:32:03,751 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:32:03,781 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:32:03,784 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:32:03,824 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:32:03,828 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:32:03,832 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:32:03,834 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:49788<->127.0.0.1:8080
+2018-04-13 09:32:03,835 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:32:03,835 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:32:03,836 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:32:03,839 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:32:03,839 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:32:03,839 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:32:03,839 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:32:03,839 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:32:03,840 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:32:03,840 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:32:03,840 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:32:03,840 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:32:03,840 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:32:03,840 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:32:03,844 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+2018-04-13 09:32:03,844 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:32:03,844 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:32:03,844 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:32:03,844 DEBUG [wire] http-outgoing-0 << "Content-Length: 1078[\r][\n]"
+2018-04-13 09:32:03,844 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:32:03 GMT[\r][\n]"
+2018-04-13 09:32:03,845 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:32:03,850 DEBUG [headers] http-outgoing-0 << HTTP/1.1 404 Not Found
+2018-04-13 09:32:03,850 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:32:03,850 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:32:03,850 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:32:03,850 DEBUG [headers] http-outgoing-0 << Content-Length: 1078
+2018-04-13 09:32:03,850 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:32:03 GMT
+2018-04-13 09:32:03,859 DEBUG [MainClientExec] Connection can be kept alive indefinitely
+2018-04-13 09:32:05,484 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 404 - /commodity-management/WEB-INF/jsp/error.jsp</h1><div class="line"></div><p><b>type</b> Status report</p><p><b>message</b> <u>/commodity-management/WEB-INF/jsp/error.jsp</u></p><p><b>description</b> <u>The requested resource is not available.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:32:05,485 DEBUG [PoolingHttpClientConnectionManager] Connection [id: 0][route: {}->http://127.0.0.1:8080] can be kept alive indefinitely
+2018-04-13 09:32:05,485 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 1; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:33:12,937 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:33:12,950 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:33:12,951 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:33:12,967 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:33:12,969 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:33:12,971 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:33:12,973 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:49819<->127.0.0.1:8080
+2018-04-13 09:33:12,973 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:33:12,973 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:33:12,974 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:33:12,975 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:33:12,975 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:33:12,975 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:33:12,975 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:33:12,975 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:33:12,975 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:33:12,975 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:33:12,975 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:33:12,975 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:33:12,975 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:33:12,975 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:33:13,037 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+2018-04-13 09:33:13,037 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:33:13,037 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:33:13,037 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:33:13,037 DEBUG [wire] http-outgoing-0 << "Content-Length: 1078[\r][\n]"
+2018-04-13 09:33:13,037 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:33:13 GMT[\r][\n]"
+2018-04-13 09:33:13,037 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:33:13,040 DEBUG [headers] http-outgoing-0 << HTTP/1.1 404 Not Found
+2018-04-13 09:33:13,040 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:33:13,040 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:33:13,040 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:33:13,040 DEBUG [headers] http-outgoing-0 << Content-Length: 1078
+2018-04-13 09:33:13,040 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:33:13 GMT
+2018-04-13 09:33:13,043 DEBUG [MainClientExec] Connection can be kept alive indefinitely
+2018-04-13 09:33:13,047 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 404 - /commodity-management/WEB-INF/jsp/error.jsp</h1><div class="line"></div><p><b>type</b> Status report</p><p><b>message</b> <u>/commodity-management/WEB-INF/jsp/error.jsp</u></p><p><b>description</b> <u>The requested resource is not available.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:33:13,047 DEBUG [PoolingHttpClientConnectionManager] Connection [id: 0][route: {}->http://127.0.0.1:8080] can be kept alive indefinitely
+2018-04-13 09:33:13,047 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 1; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:33:27,622 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:33:27,634 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:33:27,636 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:33:27,654 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:33:27,656 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:33:27,658 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:33:27,659 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:49825<->127.0.0.1:8080
+2018-04-13 09:33:27,659 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:33:27,659 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:33:27,660 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:33:27,661 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:33:27,661 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:33:27,661 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:33:27,661 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:33:27,661 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:33:27,661 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:33:27,661 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:33:27,661 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:33:27,661 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:33:27,661 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:33:27,661 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:33:47,103 DEBUG [wire] http-outgoing-0 << "[read] I/O error: Connection reset"
+2018-04-13 09:33:47,103 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:33:47,103 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Shutdown connection
+2018-04-13 09:33:47,103 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:33:47,103 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:33:47,103 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:33:47,104 INFO  [RetryExec] I/O exception (java.net.SocketException) caught when processing request to {}->http://127.0.0.1:8080: Connection reset
+2018-04-13 09:33:47,106 DEBUG [RetryExec] Connection reset
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:196)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.http.impl.conn.LoggingInputStream.read(LoggingInputStream.java:87)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:284)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:165)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:167)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:271)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at com.linzp.util.HttpUtil.get(HttpUtil.java:61)
+	at com.test.RequestTests.main(RequestTests.java:20)
+2018-04-13 09:33:47,109 INFO  [RetryExec] Retrying request to {}->http://127.0.0.1:8080
+2018-04-13 09:33:47,109 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:33:47,109 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:33:47,109 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:33:47,109 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 1][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:33:47,109 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:33:47,110 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:33:48,111 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-1: Shutdown connection
+2018-04-13 09:33:48,111 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:33:48,111 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-1: Close connection
+2018-04-13 09:33:48,111 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 1][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:35:46,111 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:35:46,124 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:35:46,125 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:35:46,143 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:35:46,145 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:35:46,147 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:35:46,149 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:49869<->127.0.0.1:8080
+2018-04-13 09:35:46,149 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:35:46,149 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:35:46,149 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:35:46,151 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:35:46,151 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:35:46,151 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:35:46,151 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:35:46,151 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:35:46,151 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:35:46,151 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:35:46,151 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:35:46,151 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:35:46,151 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:35:46,151 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:35:46,207 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 400 Bad Request[\r][\n]"
+2018-04-13 09:35:46,207 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:35:46,207 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:35:46,207 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:35:46,207 DEBUG [wire] http-outgoing-0 << "Content-Length: 1011[\r][\n]"
+2018-04-13 09:35:46,207 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:35:46 GMT[\r][\n]"
+2018-04-13 09:35:46,207 DEBUG [wire] http-outgoing-0 << "Connection: close[\r][\n]"
+2018-04-13 09:35:46,207 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:35:46,209 DEBUG [headers] http-outgoing-0 << HTTP/1.1 400 Bad Request
+2018-04-13 09:35:46,209 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:35:46,209 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:35:46,209 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:35:46,209 DEBUG [headers] http-outgoing-0 << Content-Length: 1011
+2018-04-13 09:35:46,209 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:35:46 GMT
+2018-04-13 09:35:46,209 DEBUG [headers] http-outgoing-0 << Connection: close
+2018-04-13 09:35:46,217 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 400 - </h1><div class="line"></div><p><b>type</b> Status report</p><p><b>message</b> <u></u></p><p><b>description</b> <u>The request sent by the client was syntactically incorrect.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:35:46,217 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Shutdown connection
+2018-04-13 09:35:46,217 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:35:46,217 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:35:46,217 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:35:57,272 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:35:57,284 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:35:57,285 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:35:57,301 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:35:57,303 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:35:57,305 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:35:57,306 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:49874<->127.0.0.1:8080
+2018-04-13 09:35:57,306 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:35:57,306 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:35:57,307 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:35:57,308 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:35:57,308 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:35:57,308 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:35:57,308 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:35:57,308 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:35:57,308 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:35:57,308 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:35:57,308 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:35:57,308 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:35:57,308 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:35:57,308 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:35:57,316 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 400 Bad Request[\r][\n]"
+2018-04-13 09:35:57,316 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:35:57,316 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:35:57,316 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:35:57,316 DEBUG [wire] http-outgoing-0 << "Content-Length: 1011[\r][\n]"
+2018-04-13 09:35:57,316 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:35:57 GMT[\r][\n]"
+2018-04-13 09:35:57,316 DEBUG [wire] http-outgoing-0 << "Connection: close[\r][\n]"
+2018-04-13 09:35:57,316 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:35:57,319 DEBUG [headers] http-outgoing-0 << HTTP/1.1 400 Bad Request
+2018-04-13 09:35:57,319 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:35:57,319 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:35:57,319 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:35:57,319 DEBUG [headers] http-outgoing-0 << Content-Length: 1011
+2018-04-13 09:35:57,319 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:35:57 GMT
+2018-04-13 09:35:57,319 DEBUG [headers] http-outgoing-0 << Connection: close
+2018-04-13 09:35:57,326 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 400 - </h1><div class="line"></div><p><b>type</b> Status report</p><p><b>message</b> <u></u></p><p><b>description</b> <u>The request sent by the client was syntactically incorrect.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:35:57,327 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Shutdown connection
+2018-04-13 09:35:57,327 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:35:57,327 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:35:57,327 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:40:37,570 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:40:37,582 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:40:37,583 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:40:37,599 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:40:37,601 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:40:37,603 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:40:37,605 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:52794<->127.0.0.1:8080
+2018-04-13 09:40:37,605 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:40:37,605 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:40:37,605 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:40:37,607 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:40:37,607 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:40:37,607 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:40:37,607 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:40:37,607 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:40:37,607 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:40:37,607 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:40:37,607 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:40:37,607 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:40:37,607 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:40:37,607 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:40:37,737 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 500 Internal Server Error[\r][\n]"
+2018-04-13 09:40:37,737 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:40:37,737 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:40:37,737 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:40:37,737 DEBUG [wire] http-outgoing-0 << "Content-Length: 5225[\r][\n]"
+2018-04-13 09:40:37,737 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:40:37 GMT[\r][\n]"
+2018-04-13 09:40:37,737 DEBUG [wire] http-outgoing-0 << "Connection: close[\r][\n]"
+2018-04-13 09:40:37,737 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:40:37,739 DEBUG [headers] http-outgoing-0 << HTTP/1.1 500 Internal Server Error
+2018-04-13 09:40:37,739 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:40:37,739 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:40:37,739 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:40:37,739 DEBUG [headers] http-outgoing-0 << Content-Length: 5225
+2018-04-13 09:40:37,739 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:40:37 GMT
+2018-04-13 09:40:37,739 DEBUG [headers] http-outgoing-0 << Connection: close
+2018-04-13 09:40:37,747 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 500 - Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D</h1><div class="line"></div><p><b>type</b> Exception report</p><p><b>message</b> <u>Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D</u></p><p><b>description</b> <u>The server encountered an internal error that prevented it from fulfilling this request.</u></p><p><b>exception</b></p><pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D[\n]"
+2018-04-13 09:40:37,747 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)[\n]"
+2018-04-13 09:40:37,747 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)[\n]"
+2018-04-13 09:40:37,747 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:622)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:729)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "</pre><p><b>root cause</b></p><pre>net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.util.JSONTokener.syntaxError(JSONTokener.java:499)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject._fromJSONTokener(JSONObject.java:972)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject._fromString(JSONObject.java:1201)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject.fromObject(JSONObject.java:165)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject.fromObject(JSONObject.java:134)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]com.linzp.controller.WechatLittleAppController.getOpenId(WechatLittleAppController.java:26)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]java.lang.reflect.Method.invoke(Method.java:483)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:622)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:729)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)[\n]"
+2018-04-13 09:40:37,748 DEBUG [wire] http-outgoing-0 << "</pre><p><b>note</b> <u>The full stack trace of the root cause is available in the Apache Tomcat/8.0.48 logs.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:40:37,749 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Shutdown connection
+2018-04-13 09:40:37,749 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:40:37,749 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:40:37,749 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:41:17,074 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:41:17,087 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:41:17,088 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:41:17,104 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:41:17,106 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:41:17,108 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:41:17,110 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:52825<->127.0.0.1:8080
+2018-04-13 09:41:17,110 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:41:17,110 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:41:17,111 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:41:17,112 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:41:17,112 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:41:17,112 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:41:17,112 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:41:17,112 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:41:17,112 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:41:17,112 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:41:17,112 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:41:17,112 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:41:17,112 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:41:17,112 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:41:17,239 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 500 Internal Server Error[\r][\n]"
+2018-04-13 09:41:17,239 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:41:17,239 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:41:17,239 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:41:17,239 DEBUG [wire] http-outgoing-0 << "Content-Length: 5225[\r][\n]"
+2018-04-13 09:41:17,239 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:41:17 GMT[\r][\n]"
+2018-04-13 09:41:17,239 DEBUG [wire] http-outgoing-0 << "Connection: close[\r][\n]"
+2018-04-13 09:41:17,239 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:41:17,242 DEBUG [headers] http-outgoing-0 << HTTP/1.1 500 Internal Server Error
+2018-04-13 09:41:17,242 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:41:17,242 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:41:17,242 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:41:17,242 DEBUG [headers] http-outgoing-0 << Content-Length: 5225
+2018-04-13 09:41:17,242 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:41:17 GMT
+2018-04-13 09:41:17,242 DEBUG [headers] http-outgoing-0 << Connection: close
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 500 - Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D</h1><div class="line"></div><p><b>type</b> Exception report</p><p><b>message</b> <u>Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D</u></p><p><b>description</b> <u>The server encountered an internal error that prevented it from fulfilling this request.</u></p><p><b>exception</b></p><pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:622)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:729)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "</pre><p><b>root cause</b></p><pre>net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of json=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.util.JSONTokener.syntaxError(JSONTokener.java:499)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject._fromJSONTokener(JSONObject.java:972)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject._fromString(JSONObject.java:1201)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject.fromObject(JSONObject.java:165)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject.fromObject(JSONObject.java:134)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]com.linzp.controller.WechatLittleAppController.getOpenId(WechatLittleAppController.java:27)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]java.lang.reflect.Method.invoke(Method.java:483)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)[\n]"
+2018-04-13 09:41:17,250 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:622)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:729)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)[\n]"
+2018-04-13 09:41:17,251 DEBUG [wire] http-outgoing-0 << "</pre><p><b>note</b> <u>The full stack trace of the root cause is available in the Apache Tomcat/8.0.48 logs.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:41:17,251 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Shutdown connection
+2018-04-13 09:41:17,251 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:41:17,251 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:41:17,251 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:42:47,942 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:42:47,955 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:42:47,956 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:42:47,972 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:42:47,973 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:42:47,976 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:42:47,977 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:52860<->127.0.0.1:8080
+2018-04-13 09:42:47,978 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:42:47,978 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:42:47,978 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:42:47,980 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:42:47,980 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:42:47,980 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:42:47,980 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:42:47,980 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:42:47,980 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:42:47,980 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:42:47,980 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:42:47,980 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:42:47,980 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:42:47,980 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:43:00,288 DEBUG [wire] http-outgoing-0 << "[read] I/O error: Connection reset"
+2018-04-13 09:43:00,288 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:43:00,288 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Shutdown connection
+2018-04-13 09:43:00,288 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:43:00,288 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:43:00,289 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:43:00,291 INFO  [RetryExec] I/O exception (java.net.SocketException) caught when processing request to {}->http://127.0.0.1:8080: Connection reset
+2018-04-13 09:43:00,292 DEBUG [RetryExec] Connection reset
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:196)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at org.apache.http.impl.conn.LoggingInputStream.read(LoggingInputStream.java:87)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:284)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:165)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:167)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:271)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at com.linzp.util.HttpUtil.get(HttpUtil.java:61)
+	at com.test.RequestTests.main(RequestTests.java:20)
+2018-04-13 09:43:00,295 INFO  [RetryExec] Retrying request to {}->http://127.0.0.1:8080
+2018-04-13 09:43:00,296 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:43:00,296 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:43:00,296 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:43:00,296 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 1][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:43:00,296 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:43:00,296 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:43:01,297 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-1: Shutdown connection
+2018-04-13 09:43:01,297 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:43:01,297 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-1: Close connection
+2018-04-13 09:43:01,297 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 1][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:46:43,573 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:46:43,588 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:46:43,590 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:46:43,609 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:46:43,610 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:46:43,612 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:46:43,615 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:52966<->127.0.0.1:8080
+2018-04-13 09:46:43,615 DEBUG [MainClientExec] Executing request GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:46:43,615 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:46:43,616 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:46:43,618 DEBUG [headers] http-outgoing-0 >> GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:46:43,618 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:46:43,618 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:46:43,618 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:46:43,618 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:46:43,618 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:46:43,618 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:46:43,618 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:46:43,618 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:46:43,618 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:46:43,618 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:46:43,673 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 404 Not Found[\r][\n]"
+2018-04-13 09:46:43,673 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:46:43,673 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:46:43,673 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:46:43,673 DEBUG [wire] http-outgoing-0 << "Content-Length: 1050[\r][\n]"
+2018-04-13 09:46:43,673 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:46:43 GMT[\r][\n]"
+2018-04-13 09:46:43,673 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:46:43,673 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 404 - /commodity-management/onLogin</h1><div class="line"></div><p><b>type</b> Status report</p><p><b>message</b> <u>/commodity-management/onLogin</u></p><p><b>description</b> <u>The requested resource is not available.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:46:43,676 DEBUG [headers] http-outgoing-0 << HTTP/1.1 404 Not Found
+2018-04-13 09:46:43,676 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:46:43,676 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:46:43,676 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:46:43,676 DEBUG [headers] http-outgoing-0 << Content-Length: 1050
+2018-04-13 09:46:43,676 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:46:43 GMT
+2018-04-13 09:46:43,680 DEBUG [MainClientExec] Connection can be kept alive indefinitely
+2018-04-13 09:46:43,685 DEBUG [PoolingHttpClientConnectionManager] Connection [id: 0][route: {}->http://127.0.0.1:8080] can be kept alive indefinitely
+2018-04-13 09:46:43,685 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 1; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:47:05,641 DEBUG [RequestAddCookies] CookieSpec selected: default
+2018-04-13 09:47:05,654 DEBUG [RequestAuthCache] Auth cache not set in the context
+2018-04-13 09:47:05,655 DEBUG [PoolingHttpClientConnectionManager] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
+2018-04-13 09:47:05,672 DEBUG [PoolingHttpClientConnectionManager] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 200]
+2018-04-13 09:47:05,674 DEBUG [MainClientExec] Opening connection {}->http://127.0.0.1:8080
+2018-04-13 09:47:05,676 DEBUG [DefaultHttpClientConnectionOperator] Connecting to /127.0.0.1:8080
+2018-04-13 09:47:05,677 DEBUG [DefaultHttpClientConnectionOperator] Connection established 127.0.0.1:52973<->127.0.0.1:8080
+2018-04-13 09:47:05,677 DEBUG [MainClientExec] Executing request GET /commodity-management-0.0.1-SNAPSHOT/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:47:05,677 DEBUG [MainClientExec] Target auth state: UNCHALLENGED
+2018-04-13 09:47:05,678 DEBUG [MainClientExec] Proxy auth state: UNCHALLENGED
+2018-04-13 09:47:05,679 DEBUG [headers] http-outgoing-0 >> GET /commodity-management-0.0.1-SNAPSHOT/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1
+2018-04-13 09:47:05,679 DEBUG [headers] http-outgoing-0 >> Host: 127.0.0.1:8080
+2018-04-13 09:47:05,679 DEBUG [headers] http-outgoing-0 >> Connection: Keep-Alive
+2018-04-13 09:47:05,679 DEBUG [headers] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)
+2018-04-13 09:47:05,679 DEBUG [headers] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-04-13 09:47:05,679 DEBUG [wire] http-outgoing-0 >> "GET /commodity-management-0.0.1-SNAPSHOT/onLogin?jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D HTTP/1.1[\r][\n]"
+2018-04-13 09:47:05,679 DEBUG [wire] http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2018-04-13 09:47:05,679 DEBUG [wire] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-04-13 09:47:05,679 DEBUG [wire] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.7.0_67)[\r][\n]"
+2018-04-13 09:47:05,679 DEBUG [wire] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-04-13 09:47:05,679 DEBUG [wire] http-outgoing-0 >> "[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "HTTP/1.1 500 Internal Server Error[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "Server: Apache-Coyote/1.1[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "Content-Language: en[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "Content-Length: 5249[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "Date: Fri, 13 Apr 2018 01:47:05 GMT[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "Connection: close[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "[\r][\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "<!DOCTYPE html><html><head><title>Apache Tomcat/8.0.48 - Error report</title><style type="text/css">H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; background-color: #525D76; border: none;}</style> </head><body><h1>HTTP Status 500 - Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D</h1><div class="line"></div><p><b>type</b> Exception report</p><p><b>message</b> <u>Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D</u></p><p><b>description</b> <u>The server encountered an internal error that prevented it from fulfilling this request.</u></p><p><b>exception</b></p><pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D[\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)[\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)[\n]"
+2018-04-13 09:47:05,789 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:622)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:729)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "</pre><p><b>root cause</b></p><pre>net.sf.json.JSONException: A JSONObject text must begin with '{' at character 1 of jsonString=%7B%22appid%22%3A%22appid%22%2C%22secret%22%3A%22app_secret%22%2C%22js_code%22%3A%22js_code%22%2C%22grant_type%22%3A%22grant_type%22%7D[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.util.JSONTokener.syntaxError(JSONTokener.java:499)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject._fromJSONTokener(JSONObject.java:972)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject._fromString(JSONObject.java:1201)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject.fromObject(JSONObject.java:165)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]net.sf.json.JSONObject.fromObject(JSONObject.java:134)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]com.linzp.controller.WechatLittleAppController.getOpenId(WechatLittleAppController.java:28)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]java.lang.reflect.Method.invoke(Method.java:483)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:622)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:729)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)[\n]"
+2018-04-13 09:47:05,790 DEBUG [wire] http-outgoing-0 << "[0x9]org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)[\n]"
+2018-04-13 09:47:05,791 DEBUG [wire] http-outgoing-0 << "</pre><p><b>note</b> <u>The full stack trace of the root cause is available in the Apache Tomcat/8.0.48 logs.</u></p><hr class="line"><h3>Apache Tomcat/8.0.48</h3></body></html>"
+2018-04-13 09:47:05,793 DEBUG [headers] http-outgoing-0 << HTTP/1.1 500 Internal Server Error
+2018-04-13 09:47:05,793 DEBUG [headers] http-outgoing-0 << Server: Apache-Coyote/1.1
+2018-04-13 09:47:05,793 DEBUG [headers] http-outgoing-0 << Content-Type: text/html;charset=utf-8
+2018-04-13 09:47:05,793 DEBUG [headers] http-outgoing-0 << Content-Language: en
+2018-04-13 09:47:05,793 DEBUG [headers] http-outgoing-0 << Content-Length: 5249
+2018-04-13 09:47:05,793 DEBUG [headers] http-outgoing-0 << Date: Fri, 13 Apr 2018 01:47:05 GMT
+2018-04-13 09:47:05,793 DEBUG [headers] http-outgoing-0 << Connection: close
+2018-04-13 09:47:05,800 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Shutdown connection
+2018-04-13 09:47:05,800 DEBUG [MainClientExec] Connection discarded
+2018-04-13 09:47:05,800 DEBUG [DefaultManagedHttpClientConnection] http-outgoing-0: Close connection
+2018-04-13 09:47:05,801 DEBUG [PoolingHttpClientConnectionManager] Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 200]
