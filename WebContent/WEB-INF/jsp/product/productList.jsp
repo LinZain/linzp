@@ -43,7 +43,7 @@
 																msg);
 											},
 											error : function() {
-												alert("错误");
+												alert("未查询到信息");
 											}
 										});
 							},

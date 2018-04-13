@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.linzp.entity.Product;
-import com.linzp.entity.StuInfoRole;
 import com.linzp.service.ProductInfoService;
 
 import net.sf.json.JSONObject;
@@ -28,6 +27,9 @@ public class ProductController {
     public String queryList(Product role, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject jsonObject = new JSONObject();
         List<Product> list = productInfoService.queryList(role);
+        if(list == null || list.isEmpty()){
+            return "error";
+        }
         long conut = productInfoService.getListCount(role);
         jsonObject.put("rows",list);
         jsonObject.put("total",conut);

@@ -84,6 +84,4 @@
 			advice-ref="transactionAdvice" />
 	</aop:config>
 	
-	<import resource="config.xml"/>
-
 </beans>
