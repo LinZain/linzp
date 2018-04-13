@@ -9,7 +9,7 @@
 	</appender>
 	
 	<appender name="DailyROLLING" class="org.apache.log4j.FileAppender">
-		<param name="File" value="./log/log.log" />
+		<param name="File" value="./target/log/log.log" />
 		<param name="bizFilePath" value="target/biz/log.biz"></param>
 		<param name="bizFileSize" value="30 MB"></param>
 		<param name="Append" value="true" />

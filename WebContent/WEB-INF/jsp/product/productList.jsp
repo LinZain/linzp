@@ -13,31 +13,106 @@
 	});
 
 	$(document).ready(function() {
-		queryCommodity(null);
+		queryFunc()
 	});
 
-	function queryCommodity(comtype) {
-		$.ajax({
-			type : "post",
-			url : "${pageContext.request.contextPath}/queryCom",
-			data : {
-				type : comtype
-			},
-			dataType : "json",
-			success : function(json) {
-				gril = eval(json.rows);
-				var str = "";
-				for (i in gril) {
-					str += "<tr>" + "<td>" + gril[i].stuNO + "</td>" + "<td>"
-							+ gril[i].stuName + "</td>" + "<td>"
-							+ gril[i].stuSex + "</td>" + "</tr>";
-				}
-				$("#stuInfoTable").html(str);
-			},
-			error : function() {
-				$("#stuInfoTable").html("<td>未查询到结果</td>");
-			}
-		});
+	function queryFunc() {
+		tableInit();
+	}
+	function tableInit() {
+		$("#productTable").bootstrapTable('destroy');
+		$('#productTable')
+				.bootstrapTable(
+						{
+							ajax : function(request) {
+								$
+										.ajax({
+											type : "get",
+											url : "${pageContext.request.contextPath}/queryPdt",
+											data : {
+												type : $('#keyWord').val()
+											},
+											dataType : "json",
+											cache : false,
+											success : function(msg) {
+												request.success({
+													row : msg
+												});
+												$('#productTable')
+														.bootstrapTable('load',
+																msg);
+											},
+											error : function() {
+												alert("错误");
+											}
+										});
+							},
+							columns : [ {
+								field : 'pdtId',
+								halign : 'center',
+								align : 'center',
+								title : '产品编号'
+							}, {
+								field : 'pdtPic',
+								halign : 'center',
+								align : 'center',
+								title : '产品图片',
+							}, {
+								field : 'pdtTitle',
+								halign : 'center',
+								align : 'center',
+								title : '产品主题',
+							}, {
+								field : 'pdtPrice',
+								halign : 'center',
+								align : 'center',
+								title : '产品价格',
+							}, {
+								field : 'promotionPrice',
+								halign : 'center',
+								align : 'center',
+								title : '打折价格',
+							}, {
+								field : 'pdtBrand',
+								halign : 'center',
+								align : 'center',
+								title : '产品商标',
+							}, {
+								field : 'pdtCategory',
+								halign : 'center',
+								align : 'center',
+								title : '产品类别',
+							}, {
+								field : 'pdtDetial',
+								halign : 'center',
+								align : 'center',
+								title : '产品详情',
+							}, {
+								field : 'pdtDescribe',
+								halign : 'center',
+								align : 'center',
+								title : '产品描述',
+							}, {
+								field : 'pdtInventory',
+								halign : 'center',
+								align : 'center',
+								title : '产品库存',
+							}, {
+								field : 'pdtStatus',
+								halign : 'center',
+								align : 'center',
+								title : '产品状态',
+							} ],
+							classes : 'table table-hover',
+							sortOrder : 'asc',
+							pagination : true,
+							sidePagination : 'server',
+							clickToSelect : true,
+							pageNumber : 1,
+							pageSize : 10,
+							pageList : [ 10, 20 ],
+							cache : false
+						});
 	}
 </script>
 <body class="layui-layout-body">
@@ -45,7 +120,8 @@
 		<!-- 头部区域（可配合layui已有的水平导航） -->
 		<div class="layui-header">
 			<div class="layui-logo">
-				<a href="javascript:change('./change','index')" style="color: white;">BOLL6电商管理系统</a>
+				<a href="javascript:change('./change','index')"
+					style="color: white;">BOLL6电商管理系统</a>
 			</div>
 			<ul class="layui-nav layui-layout-left">
 				<li class="layui-nav-item layui-this"><a
@@ -134,15 +210,7 @@
 			</div>
 		</div>
 		<div class="layui-body">
-			<table class="layui-table">
-				<thead>
-					<tr>
-						<th>学号</th>
-						<th>姓名</th>
-						<th>性别</th>
-					</tr>
-				</thead>
-				<tbody id="stuInfoTable"></tbody>
+			<table class="table table-striped" id="productTable">
 			</table>
 		</div>
 	</div>

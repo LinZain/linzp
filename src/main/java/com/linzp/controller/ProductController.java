@@ -12,26 +12,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.linzp.entity.Product;
 import com.linzp.entity.StuInfoRole;
-import com.linzp.service.CommodityInfoService;
+import com.linzp.service.ProductInfoService;
 
 import net.sf.json.JSONObject;
 
 @Controller
-public class CommodityController {
+public class ProductController {
     @Autowired
-    CommodityInfoService studentInfoService;
+    ProductInfoService productInfoService;
 
     @ResponseBody
-    @RequestMapping(value = { "/queryCom" }, method = { RequestMethod.POST })
-    public String queryListByType(String type, HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @RequestMapping(value = { "/queryPdt" }, method = { RequestMethod.GET })
+    public String queryList(Product role, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject jsonObject = new JSONObject();
-        StuInfoRole role = new StuInfoRole();
-        if (type == null || type.isEmpty()) {
-            role.setStuName(type);
-        }
-        List<StuInfoRole> list = studentInfoService.queryList(role);
-        long conut = studentInfoService.getListCount(role);
+        List<Product> list = productInfoService.queryList(role);
+        long conut = productInfoService.getListCount(role);
         jsonObject.put("rows",list);
         jsonObject.put("total",conut);
         return jsonObject.toString();

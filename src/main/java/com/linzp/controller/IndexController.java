@@ -10,12 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.linzp.service.CommodityInfoService;
+import com.linzp.service.ProductInfoService;
 
 @Controller
 public class IndexController {
     @Autowired
-    CommodityInfoService studentInfoService;
+    ProductInfoService studentInfoService;
 
     @RequestMapping(value = { "/change" }, method = { RequestMethod.POST })
     private String login(String url, HttpServletRequest request, HttpServletResponse response) throws IOException {

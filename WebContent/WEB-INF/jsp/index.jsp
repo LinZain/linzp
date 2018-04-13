@@ -63,12 +63,12 @@
 				<i class="layui-icon">&#xe63f;</i>
 			</div>
 			<div class="layui-col-md2">
-				<a href="javascript:change('./change','commodity/commodityList')"
+				<a href="javascript:change('./change','product/productList')"
 					class="change"><img src="./img/font/1.jpg"></a>
 			</div>
 			<div class="layui-col-md2">
 				<a
-					href="javascript:change('./change','commodity/commodityManagement')"
+					href="javascript:change('./change','product/productManagement')"
 					class="change"><img src="./img/font/2.jpg"></a>
 			</div>
 			<div class="layui-col-md2">

@@ -2,20 +2,22 @@ package com.linzp.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.linzp.util.Constants;
 import com.linzp.util.HttpUtil;
-import com.linzp.util.WechatConfigRole;
 
 import net.sf.json.JSONObject;
 
 @Controller
 public class WechatLittleAppController {
+    private static Logger logger = Logger.getLogger(WechatLittleAppController.class);
 
+    @ResponseBody
     @RequestMapping(value = "/onLogin", method = RequestMethod.GET)
     public String getOpenId(HttpServletRequest request) {
         String appid = request.getParameter("appid");
@@ -27,6 +29,7 @@ public class WechatLittleAppController {
         }
         String url = String.format(Constants.WECHAT_GET_OPENID_URL, appid, secret, jsCode, grantType);
         String data = HttpUtil.get(url);
+        logger.info("data="+data);
         JSONObject jsonData = new JSONObject();
         jsonData.put("data", data);
 
