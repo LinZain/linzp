@@ -5,9 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.linzp.entity.WechatConfigRole;
 import com.linzp.util.Constants;
 import com.linzp.util.HttpUtil;
+import com.linzp.util.WechatConfigRole;
 
 @Controller
 public class WechatLittleAppController {

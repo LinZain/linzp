@@ -1,4 +1,6 @@
-package com.linzp.entity;
+package com.linzp.util;
+
+import javax.persistence.Entity;
 
 public class WechatConfigRole {
 	private String appID;
