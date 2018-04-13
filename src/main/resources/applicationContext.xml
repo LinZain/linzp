@@ -22,7 +22,7 @@
 	<tx:annotation-driven />
 	
 	<!-- hibernate -->
-	<context:property-placeholder location="classpath:jdbc.properties" />
+	<context:property-placeholder location="classpath:jdbc.properties" ignore-unresolvable="true"/>
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
@@ -83,5 +83,7 @@
 		<aop:advisor pointcut-ref="transactionPointcut"
 			advice-ref="transactionAdvice" />
 	</aop:config>
+	
+	<import resource="config.xml"/>
 
 </beans>
