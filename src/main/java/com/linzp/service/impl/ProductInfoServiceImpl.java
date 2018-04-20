@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.linzp.dao.BaseDaoI;
 import com.linzp.entity.Product;
-import com.linzp.entity.StuInfoRole;
 import com.linzp.service.ProductInfoService;
 
 @Service("studentInfoService")

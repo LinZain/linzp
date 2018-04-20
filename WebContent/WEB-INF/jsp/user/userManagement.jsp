@@ -21,9 +21,9 @@
 			</div>
 			<ul class="layui-nav layui-layout-left">
 				<li class="layui-nav-item"><a
-					href="javascript:change('./change','commodity/commodityList')">商品列表</a></li>
+					href="javascript:change('./change','product/productList')">商品列表</a></li>
 				<li class="layui-nav-item"><a
-					href="javascript:change('./change','commodity/commodityManagement')">商品管理</a></li>
+					href="javascript:change('./change','product/productManagement')">商品管理</a></li>
 				<li class="layui-nav-item"><a
 					href="javascript:change('./change','order/orderManagement')">订单管理</a></li>
 				<li class="layui-nav-item"><a

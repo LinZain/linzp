@@ -75,7 +75,36 @@
 	}
 
 	function testButton() {
-		alert("test");
+		$.ajax({
+			type : "get",
+			url : "${pageContext.request.contextPath}/jiyu/saveOrder",
+			data:{
+				customerName : "aaaa",
+				customerPhone : "12345678912",
+				customerAddress : "上海市",
+				customerTpye : "1"
+			},
+			success : function(json) {
+				alert("success");
+			},
+			error : function(json) {
+				alert("error");
+			}
+		});
+	}
+	
+	function queryButton() {
+		$.ajax({
+			type : "get",
+			url : "${pageContext.request.contextPath}/jiyu/queryOrder",
+			dataType : "json",
+			success : function(json) {
+				console.info(json);
+			},
+			error : function(json) {
+				console.info("error");
+			}
+		});
 	}
 </script>
 <body class="layui-layout-body">
@@ -88,9 +117,9 @@
 			</div>
 			<ul class="layui-nav layui-layout-left">
 				<li class="layui-nav-item"><a
-					href="javascript:change('./change','commodity/commodityList')">商品列表</a></li>
+					href="javascript:change('./change','product/productList')">商品列表</a></li>
 				<li class="layui-nav-item"><a
-					href="javascript:change('./change','commodity/commodityManagement')">商品管理</a></li>
+					href="javascript:change('./change','product/productManagement')">商品管理</a></li>
 				<li class="layui-nav-item layui-this"><a
 					href="javascript:change('./change','order/orderManagement')">订单管理</a></li>
 				<li class="layui-nav-item"><a
@@ -151,6 +180,8 @@
 				<table class="table table-striped" id="commodityManagementTable">
 				</table>
 			</form>
+			<button id="testButton" onclick="testButton()">保存订单</button>
+			<button id="testButton" onclick="queryButton()">查询订单</button>
 		</div>
 	</div>
 </body>

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.linzp.dao.BaseDaoI;
+import com.linzp.entity.JiYuOrderRole;
 import com.linzp.entity.StuInfoRole;
 import com.linzp.service.OrderInfoService;
 
@@ -18,6 +19,9 @@ import com.linzp.service.OrderInfoService;
 public class OrderInfoServiceImpl implements OrderInfoService {
     @Autowired
     private BaseDaoI<StuInfoRole> execOrderDAO;
+    
+    @Autowired
+    private BaseDaoI<JiYuOrderRole> execJiYuOrderDAO;
 
     @Override
     public List<StuInfoRole> queryList(StuInfoRole role) {
@@ -54,6 +58,13 @@ public class OrderInfoServiceImpl implements OrderInfoService {
             }
         }
         return hql.toString();
+    }
+
+    @Override
+    public void saveJiYuOrder(JiYuOrderRole role) {
+        if(role != null){
+            execJiYuOrderDAO.save(role);
+        }
     }
 
 }
