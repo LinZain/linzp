@@ -99,7 +99,12 @@
 			url : "${pageContext.request.contextPath}/jiyu/queryOrder",
 			dataType : "json",
 			success : function(json) {
-				console.info(json);
+				gril = eval(json.rows);
+				var str = "";
+				for (i in gril) {
+					str +=  gril[i].customerName+gril[i].customerPhone + gril[i].customerAddress + gril[i].customerType+"<br>";
+				}
+				$("#queryOrderP").html(str);
 			},
 			error : function(json) {
 				console.info("error");
@@ -182,6 +187,7 @@
 			</form>
 			<button id="testButton" onclick="testButton()">保存订单</button>
 			<button id="testButton" onclick="queryButton()">查询订单</button>
+			<p id="queryOrderP"></p>
 		</div>
 	</div>
 </body>

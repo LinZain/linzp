@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.linzp.dao.BaseDaoI;
 import com.linzp.entity.JiYuOrderRole;
-import com.linzp.entity.StuInfoRole;
 import com.linzp.service.JiYuOrderInfoService;
 
 @Service("jiYuOrderInfoService")
