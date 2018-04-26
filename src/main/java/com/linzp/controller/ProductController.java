@@ -18,12 +18,13 @@ import com.linzp.service.ProductInfoService;
 import net.sf.json.JSONObject;
 
 @Controller
+@RequestMapping(value="/pdt")
 public class ProductController {
     @Autowired
     ProductInfoService productInfoService;
 
     @ResponseBody
-    @RequestMapping(value = { "/queryPdt" }, method = { RequestMethod.GET })
+    @RequestMapping(value = { "/getPdt" }, method = { RequestMethod.GET })
     public String queryList(Product role, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject jsonObject = new JSONObject();
         List<Product> list = productInfoService.queryList(role);
@@ -35,8 +36,9 @@ public class ProductController {
         jsonObject.put("total",conut);
         return jsonObject.toString();
     }
+    
     @ResponseBody
-    @RequestMapping(value = { "/queryPdtByGroupId" }, method = { RequestMethod.GET })
+    @RequestMapping(value = { "/getPdtByGroupId" }, method = { RequestMethod.GET })
     public String queryListByGroupId(String groupId, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject jsonObject = new JSONObject();
         List<Product> list = productInfoService.getListByGroup(groupId);

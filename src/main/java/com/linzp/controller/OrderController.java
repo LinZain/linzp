@@ -24,7 +24,7 @@ public class OrderController {
     OrderInfoService orderInfoService;
 
     @ResponseBody
-    @RequestMapping(value = { "/queryOrder" }, method = { RequestMethod.POST })
+    @RequestMapping(value = { "/getOrder" }, method = { RequestMethod.POST })
     public String queryListByType(String type, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject json = new JSONObject();
         StuInfoRole role = new StuInfoRole();
