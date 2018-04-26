@@ -41,7 +41,7 @@ public class ProductController {
     @RequestMapping(value = { "/getPdtByGroupId" }, method = { RequestMethod.GET })
     public String queryListByGroupId(String groupId, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject jsonObject = new JSONObject();
-        List<Product> list = productInfoService.getListByGroup(groupId);
+        List<Product> list = productInfoService.getListByGroupId(groupId);
         if(list == null || list.isEmpty()){
             return "error";
         }
@@ -49,6 +49,21 @@ public class ProductController {
         jsonObject.put("rows",list);
         jsonObject.put("total",conut);
         return jsonObject.toString();
+    }
+    
+    
+    @ResponseBody
+    @RequestMapping(value = { "/getPdtByActId" }, method = { RequestMethod.GET })
+    public String queryListByActId(String actId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+    	JSONObject jsonObject = new JSONObject();
+    	List<Product> list = productInfoService.getListByActId(actId);
+    	if(list == null || list.isEmpty()){
+    		return "error";
+    	}
+    	long conut = list.size();
+    	jsonObject.put("rows",list);
+    	jsonObject.put("total",conut);
+    	return jsonObject.toString();
     }
     
 }

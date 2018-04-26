@@ -12,12 +12,13 @@
 	function testButton() {
 		$.ajax({
 			type : "get",
-			url : "${pageContext.request.contextPath}/pdt/getPdtByGroupId",
+			url : "${pageContext.request.contextPath}/index/getActList",
 			data : {
-				groupId : "1",
+				count : 1,
+				fromApp : "yp"
 			},
 			success : function(json) {
-				console.info(JSON.stringify(json));
+				$("#queryOrderP").html(JSON.stringify(json));
 			},
 			error : function(json) {
 				alert("error");
@@ -28,20 +29,16 @@
 	function queryButton() {
 		$.ajax({
 			type : "get",
-			url : "${pageContext.request.contextPath}/jiyu/queryOrder",
-			dataType : "json",
+			url : "${pageContext.request.contextPath}/jiyu/getBannerList",
+			data : {
+				count : 5,
+				fromApp : "yp"
+			},
 			success : function(json) {
-				gril = eval(json.rows);
-				var str = "";
-				for (i in gril) {
-					str += gril[i].customerName + gril[i].customerPhone
-							+ gril[i].customerAddress + gril[i].customerType
-							+ "<br>";
-				}
-				$("#queryOrderP").html(str);
+				$("#queryOrderP").html(JSON.stringify(json));
 			},
 			error : function(json) {
-				console.info("error");
+				alert("error");
 			}
 		});
 	}
