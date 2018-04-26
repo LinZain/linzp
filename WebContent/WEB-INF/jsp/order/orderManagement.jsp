@@ -77,15 +77,12 @@
 	function testButton() {
 		$.ajax({
 			type : "get",
-			url : "${pageContext.request.contextPath}/jiyu/saveOrder",
+			url : "${pageContext.request.contextPath}/queryPdtByGroupId",
 			data:{
-				customerName : "aaaa",
-				customerPhone : "12345678912",
-				customerAddress : "上海市",
-				customerTpye : "1"
+				groupId : "1",
 			},
 			success : function(json) {
-				alert("success");
+				console.info(JSON.stringify(json));
 			},
 			error : function(json) {
 				alert("error");

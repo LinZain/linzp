@@ -30,7 +30,7 @@
 											type : "get",
 											url : "${pageContext.request.contextPath}/queryPdt",
 											data : {
-												type : $('#keyWord').val()
+												pdtTitle : "123"
 											},
 											dataType : "json",
 											cache : false,
