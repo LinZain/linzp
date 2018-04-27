@@ -12,15 +12,15 @@ import com.linzp.entity.BannerRole;
 import com.linzp.service.BannerInfoService;
 
 @Service("bannerInfoService")
-@SuppressWarnings("unchecked")
 public class BannerInfoServiceImpl implements BannerInfoService {
 	@Autowired
 	private BaseDaoI<BannerRole> execOrderDAO;
 
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
 	public List<BannerRole> getBannerList(String fromApp, int count) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String sql = "select banner_picUrl,banner_title,banner_targetUrl from tb_banner where banner_forApp=:fromApp and banner_status=0 limit :howMuch ;";
+		String sql = "select * from tb_banner where forApp =:fromApp and banner_status=0 limit :count ;";
 		params.put("fromApp", fromApp);
 		params.put("count", count);
 

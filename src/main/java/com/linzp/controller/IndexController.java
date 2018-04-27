@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.linzp.entity.ActivityRole;
 import com.linzp.entity.BannerRole;
@@ -75,7 +76,7 @@ public class IndexController {
 	
 	@ResponseBody
 	@RequestMapping(value = { "/getGroupList" }, method = { RequestMethod.GET })
-	public String queryListByActId(int count, String fromApp, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String queryListByActId(String fromApp, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		JSONObject jsonObject = new JSONObject();
 		List<GroupRole> list = groupInfoService.getGroupList(fromApp);
 		if (list == null || list.isEmpty()) {

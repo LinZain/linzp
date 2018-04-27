@@ -24,7 +24,7 @@ public class BannerRole {
 	@Column(name = "banner_status")
 	private String bannerStatus;
 
-	@Column(name = "banner_forApp")
+	@Column(name = "forApp")
 	private String bannerForApp;
 
 	public String getBannerId() {

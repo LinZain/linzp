@@ -29,10 +29,9 @@
 	function queryButton() {
 		$.ajax({
 			type : "get",
-			url : "${pageContext.request.contextPath}/jiyu/getBannerList",
+			url : "${pageContext.request.contextPath}/index/getActContent",
 			data : {
-				count : 5,
-				fromApp : "yp"
+				actId : "1"
 			},
 			success : function(json) {
 				$("#queryOrderP").html(JSON.stringify(json));

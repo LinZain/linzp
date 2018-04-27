@@ -21,7 +21,7 @@ public class ActivityInfoServiceImpl implements ActivityInfoService {
 	@Override
 	public List<ActivityRole> getActList(String fromApp, int count) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String sql = "select act_time,act_title,act_picUrl,act_id from tb_activity where act_froApp= :fromApp and banner_status=0 limit :count";
+		String sql = "select * from tb_activity where forApp = :fromApp and act_status=0 limit :count ;";
 		params.put("fromApp", fromApp);
 		params.put("count", count);
 
