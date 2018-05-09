@@ -12,10 +12,9 @@
 	function testButton() {
 		$.ajax({
 			type : "get",
-			url : "${pageContext.request.contextPath}/index/getActList",
+			url : "${pageContext.request.contextPath}/pdt/getPdtByActId",
 			data : {
-				count : 1,
-				fromApp : "yp"
+				actId : 1,
 			},
 			success : function(json) {
 				$("#queryOrderP").html(JSON.stringify(json));
