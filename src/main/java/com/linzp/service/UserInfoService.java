@@ -1,5 +1,9 @@
 package com.linzp.service;
 
+import com.linzp.entity.UserRole;
+
 public interface UserInfoService {
-	public String getNewUserId(String userName, String pwd, String nickName);
+	public void addNewUser(UserRole role);
+	public String save(UserRole role);
+	public UserRole getUser(UserRole role);
 }

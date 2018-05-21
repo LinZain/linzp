@@ -11,34 +11,34 @@ public class UserRole {
 
 	@Id
 	@Column(name = "user_id")
-	private int userId;
+	private String userId;
 
 	@Column(name = "to_id")
-	private int toId;
+	private String toId;
 
 	@Column(name = "login_name")
-	private int loginName;
+	private String loginName;
 
 	@Column(name = "password")
-	private int password;
+	private String password;
 
 	@Column(name = "nick_name")
-	private int nickName;
+	private String nickName;
 
 	@Column(name = "real_name")
-	private int realName;
+	private String realName;
 
 	@Column(name = "mobile")
-	private int mobile;
+	private String mobile;
 
 	@Column(name = "email")
-	private int email;
+	private String email;
 
 	@Column(name = "gen_time")
-	private int genTime;
+	private String genTime;
 
 	@Column(name = "login_time")
-	private int loginTime;
+	private String loginTime;
 
 	@Column(name = "count")
 	private int count;
@@ -47,85 +47,176 @@ public class UserRole {
 	private int source;
 
 	@Column(name = "address")
-	private int address;
+	private String address;
 
-	public int getUserId() {
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + count;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((genTime == null) ? 0 : genTime.hashCode());
+		result = prime * result + ((loginName == null) ? 0 : loginName.hashCode());
+		result = prime * result + ((loginTime == null) ? 0 : loginTime.hashCode());
+		result = prime * result + ((mobile == null) ? 0 : mobile.hashCode());
+		result = prime * result + ((nickName == null) ? 0 : nickName.hashCode());
+		result = prime * result + ((password == null) ? 0 : password.hashCode());
+		result = prime * result + ((realName == null) ? 0 : realName.hashCode());
+		result = prime * result + source;
+		result = prime * result + ((toId == null) ? 0 : toId.hashCode());
+		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UserRole other = (UserRole) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (count != other.count)
+			return false;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (genTime == null) {
+			if (other.genTime != null)
+				return false;
+		} else if (!genTime.equals(other.genTime))
+			return false;
+		if (loginName == null) {
+			if (other.loginName != null)
+				return false;
+		} else if (!loginName.equals(other.loginName))
+			return false;
+		if (loginTime == null) {
+			if (other.loginTime != null)
+				return false;
+		} else if (!loginTime.equals(other.loginTime))
+			return false;
+		if (mobile == null) {
+			if (other.mobile != null)
+				return false;
+		} else if (!mobile.equals(other.mobile))
+			return false;
+		if (nickName == null) {
+			if (other.nickName != null)
+				return false;
+		} else if (!nickName.equals(other.nickName))
+			return false;
+		if (password == null) {
+			if (other.password != null)
+				return false;
+		} else if (!password.equals(other.password))
+			return false;
+		if (realName == null) {
+			if (other.realName != null)
+				return false;
+		} else if (!realName.equals(other.realName))
+			return false;
+		if (source != other.source)
+			return false;
+		if (toId == null) {
+			if (other.toId != null)
+				return false;
+		} else if (!toId.equals(other.toId))
+			return false;
+		if (userId == null) {
+			if (other.userId != null)
+				return false;
+		} else if (!userId.equals(other.userId))
+			return false;
+		return true;
+	}
+
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
-	public int getToId() {
+	public String getToId() {
 		return toId;
 	}
 
-	public void setToId(int toId) {
+	public void setToId(String toId) {
 		this.toId = toId;
 	}
 
-	public int getLoginName() {
+	public String getLoginName() {
 		return loginName;
 	}
 
-	public void setLoginName(int loginName) {
+	public void setLoginName(String loginName) {
 		this.loginName = loginName;
 	}
 
-	public int getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(int password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public int getNickName() {
+	public String getNickName() {
 		return nickName;
 	}
 
-	public void setNickName(int nickName) {
+	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
 
-	public int getRealName() {
+	public String getRealName() {
 		return realName;
 	}
 
-	public void setRealName(int realName) {
+	public void setRealName(String realName) {
 		this.realName = realName;
 	}
 
-	public int getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(int mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 
-	public int getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(int email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
-	public int getGenTime() {
+	public String getGenTime() {
 		return genTime;
 	}
 
-	public void setGenTime(int genTime) {
+	public void setGenTime(String genTime) {
 		this.genTime = genTime;
 	}
 
-	public int getLoginTime() {
+	public String getLoginTime() {
 		return loginTime;
 	}
 
-	public void setLoginTime(int loginTime) {
+	public void setLoginTime(String loginTime) {
 		this.loginTime = loginTime;
 	}
 
@@ -145,70 +236,12 @@ public class UserRole {
 		this.source = source;
 	}
 
-	public int getAddress() {
+	public String getAddress() {
 		return address;
 	}
 
-	public void setAddress(int address) {
+	public void setAddress(String address) {
 		this.address = address;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + address;
-		result = prime * result + count;
-		result = prime * result + email;
-		result = prime * result + genTime;
-		result = prime * result + loginName;
-		result = prime * result + loginTime;
-		result = prime * result + mobile;
-		result = prime * result + nickName;
-		result = prime * result + password;
-		result = prime * result + realName;
-		result = prime * result + source;
-		result = prime * result + toId;
-		result = prime * result + userId;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UserRole other = (UserRole) obj;
-		if (address != other.address)
-			return false;
-		if (count != other.count)
-			return false;
-		if (email != other.email)
-			return false;
-		if (genTime != other.genTime)
-			return false;
-		if (loginName != other.loginName)
-			return false;
-		if (loginTime != other.loginTime)
-			return false;
-		if (mobile != other.mobile)
-			return false;
-		if (nickName != other.nickName)
-			return false;
-		if (password != other.password)
-			return false;
-		if (realName != other.realName)
-			return false;
-		if (source != other.source)
-			return false;
-		if (toId != other.toId)
-			return false;
-		if (userId != other.userId)
-			return false;
-		return true;
 	}
 
 	@Override

@@ -11,14 +11,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.linzp.entity.ActivityRole;
 import com.linzp.entity.BannerRole;
 import com.linzp.entity.GroupRole;
+import com.linzp.entity.OaqRole;
 import com.linzp.service.ActivityInfoService;
 import com.linzp.service.BannerInfoService;
 import com.linzp.service.GroupInfoService;
+import com.linzp.service.OaqService;
 
 import net.sf.json.JSONObject;
 
@@ -31,6 +32,8 @@ public class IndexController {
 	private BannerInfoService bannerInfoService;
 	@Autowired
 	private GroupInfoService groupInfoService;
+	@Autowired
+	private OaqService oaqService;
 
 	@ResponseBody
 	@RequestMapping(value = { "/getActList" }, method = { RequestMethod.GET })
@@ -85,6 +88,18 @@ public class IndexController {
 		long conut = list.size();
 		jsonObject.put("rows", list);
 		jsonObject.put("total", conut);
+		return jsonObject.toString();
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = { "/getOaq" }, method = { RequestMethod.GET })
+	public String getOaq(String fromApp, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		JSONObject jsonObject = new JSONObject();
+		OaqRole role = oaqService.getOaqInfo(fromApp);
+		if (role == null) {
+			return null;
+		}
+		jsonObject.put("contentText", role.getContentText());
 		return jsonObject.toString();
 	}
 }

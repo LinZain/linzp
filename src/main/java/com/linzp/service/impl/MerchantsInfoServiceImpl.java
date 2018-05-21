@@ -1,6 +1,7 @@
 package com.linzp.service.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,17 @@ public class MerchantsInfoServiceImpl implements MerchantsInfoService {
 		
 		MerchantsRole role = execOrderDAO.get(hql, params);
 		return role;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<MerchantsRole> getMerchantsListById(String merchantsIds) {
+		Map<String, Object> params = new HashMap<String, Object>();
+        String sql = "select * from tb_merchants where merchants_id in (:merchantsIds);";
+        params.put("merchantsIds", merchantsIds);
+
+        List<MerchantsRole> list = (List<MerchantsRole>) execOrderDAO.findEntityBySql(sql, params, MerchantsRole.class);
+        return list;
 	}
 
 }

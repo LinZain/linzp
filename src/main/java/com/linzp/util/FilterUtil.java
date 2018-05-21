@@ -10,7 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 public class FilterUtil implements Filter {
     public void destroy() {
@@ -23,9 +22,8 @@ public class FilterUtil implements Filter {
 
     public void doFilter(ServletRequest args0, ServletResponse args1, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) args0;
-        HttpServletResponse res = (HttpServletResponse) args1;
         //获得所有请求参数名
-        Enumeration params = req.getParameterNames();
+        Enumeration<?> params = req.getParameterNames();
         String sql = "";
         while (params.hasMoreElements()) {
             //得到参数名

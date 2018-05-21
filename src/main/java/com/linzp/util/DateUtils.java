@@ -98,4 +98,10 @@ public class DateUtils {
             return YYYY_MM_DD_HHMMSS_SSS.format(date);
         }
     }
+    
+    public static Date getCurrDate_YYYY_MM_DD() throws ParseException{
+    	synchronized (YYYY_MM_DD) {
+            return YYYY_MM_DD.parse(YYYY_MM_DD.format(new Date()));
+        }
+    }
 }
