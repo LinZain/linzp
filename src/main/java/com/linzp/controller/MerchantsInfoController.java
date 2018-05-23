@@ -38,9 +38,9 @@ public class MerchantsInfoController {
 
 	@ResponseBody
 	@RequestMapping(value = { "/getMerchantsListById" }, method = { RequestMethod.GET })
-	public String getMerchantsListById(String merchantsIds, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String getMerchantsListById(String merchantsId, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		JSONObject jsonObject = new JSONObject();
-		List<MerchantsRole> list = merchantsInfoService.getMerchantsListById(merchantsIds);
+		List<MerchantsRole> list = merchantsInfoService.getMerchantsListById(merchantsId);
 		if (list == null || list.isEmpty()) {
 			return null;
 		}

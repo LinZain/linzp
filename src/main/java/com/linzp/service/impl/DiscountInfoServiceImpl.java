@@ -4,11 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.linzp.dao.BaseDaoI;
 import com.linzp.entity.DiscountRole;
 import com.linzp.service.DiscountInfoService;
 
+@Service("discountInfoService")
 public class DiscountInfoServiceImpl implements DiscountInfoService {
 
 	@Autowired

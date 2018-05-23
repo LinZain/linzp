@@ -12,7 +12,6 @@ import com.linzp.entity.GroupRole;
 import com.linzp.service.GroupInfoService;
 
 @Service("groupInfoService")
-@SuppressWarnings("unchecked")
 public class GroupInfoServiceImpl implements GroupInfoService {
     @Autowired
     private BaseDaoI<GroupRole> execOrderDAO;
@@ -20,10 +19,10 @@ public class GroupInfoServiceImpl implements GroupInfoService {
     @Override
     public List<GroupRole> getGroupList(String fromApp) {
         Map<String, Object> params = new HashMap<String, Object>();
-        String sql = "select * from tb_groupList where group_status = '0' and forApp= :fromApp ;";
+        String sql = "from GroupRole where group_status = '0' and forApp= :fromApp";
         params.put("fromApp", fromApp);
 
-        List<GroupRole> list = (List<GroupRole>) execOrderDAO.findEntityBySql(sql, params, GroupRole.class);
+        List<GroupRole> list = execOrderDAO.find(sql, params);
         return list;
     }
 

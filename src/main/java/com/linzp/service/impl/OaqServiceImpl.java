@@ -11,7 +11,7 @@ import com.linzp.dao.BaseDaoI;
 import com.linzp.entity.OaqRole;
 import com.linzp.service.OaqService;
 
-@Service("orderInfoService")
+@Service("oapInfoService")
 @Transactional
 public class OaqServiceImpl implements OaqService {
 	@Autowired

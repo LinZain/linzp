@@ -20,7 +20,7 @@ public class OrderInfoServiceImpl implements OrderInfoService {
 
 	@Override
 	public void addOrder(OrderRole role) {
-		execOrderDAO.save(role);
+		execOrderDAO.saveOrUpdate(role);
 	}
 
 	@SuppressWarnings("unchecked")

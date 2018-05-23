@@ -13,7 +13,6 @@ import com.linzp.entity.Product;
 import com.linzp.service.ProductInfoService;
 
 @Service("productInfoService")
-@SuppressWarnings("unchecked")
 public class ProductInfoServiceImpl implements ProductInfoService {
 	@Autowired
 	private BaseDaoI<Product> execOrderDAO;
@@ -93,20 +92,20 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
 	public List<Product> getListByGroupId(String groupId) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String sql = "select * from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId);";
+		String hql = "from Product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId)";
 		params.put("groupId", groupId);
 
-		List<Product> list = (List<Product>) execOrderDAO.findEntityBySql(sql, params, Product.class);
+		List<Product> list = execOrderDAO.find(hql, params);
 		return list;
 	}
 
 	@Override
 	public List<Product> getListByActId(String actId) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String sql = "select * from tb_product where pdt_id in(select pdt_id from tb_promoteProduct where act_id= :actId and pmtpdt_status='0')";
+		String hql = "from Product where pdt_id in(select pdt_id from tb_promoteProduct where act_id= :actId and pmtpdt_status='0')";
 		params.put("actId", actId);
 
-		List<Product> list = (List<Product>) execOrderDAO.findEntityBySql(sql, params, Product.class);
+		List<Product> list = execOrderDAO.find(hql, params);
 		return list;
 	}
 

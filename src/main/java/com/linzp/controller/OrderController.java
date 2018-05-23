@@ -24,7 +24,7 @@ public class OrderController {
     OrderInfoService orderInfoService;
 
     @ResponseBody
-    @RequestMapping(value = { "/getOrderList" }, method = { RequestMethod.POST })
+    @RequestMapping(value = { "/getOrderList" }, method = { RequestMethod.GET })
     public String queryListByType(String userId, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject json = new JSONObject();
         List<OrderRole> list = orderInfoService.getOrderList(userId);
@@ -38,13 +38,15 @@ public class OrderController {
     }
     
     @ResponseBody
-    @RequestMapping(value = { "/addOrder" }, method = { RequestMethod.POST })
+    @RequestMapping(value = { "/addOrder" }, method = { RequestMethod.GET })
     public String addOrder(OrderRole role, HttpServletRequest request, HttpServletResponse response) throws IOException {
-    	 if(role != null){
+    	JSONObject json = new JSONObject(); 
+    	if(role != null){
              orderInfoService.addOrder(role);
          }else{
              return null;
          }
-         return "success";
+    	json.put("result", "success");
+         return json.toString();
     }
 }

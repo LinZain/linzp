@@ -12,10 +12,12 @@
 	function testButton() {
 		$.ajax({
 			type : "get",
-			url : "${pageContext.request.contextPath}/pdt/getPdtByActId",
+			url : "${pageContext.request.contextPath}/user/getDefaultAddress",
 			data : {
-				actId : 1,
+				userId : "1",
 			},
+			dataType : "json",
+			contentType : "application/json",
 			success : function(json) {
 				$("#queryOrderP").html(JSON.stringify(json));
 			},
@@ -28,9 +30,9 @@
 	function queryButton() {
 		$.ajax({
 			type : "get",
-			url : "${pageContext.request.contextPath}/index/getActContent",
+			url : "${pageContext.request.contextPath}/merchants/getMerchantsListById",
 			data : {
-				actId : "1"
+				merchantsId : "123"
 			},
 			success : function(json) {
 				$("#queryOrderP").html(JSON.stringify(json));
