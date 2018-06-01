@@ -99,13 +99,14 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 		return list;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Product> getListByActId(String actId) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "from Product where pdt_id in(select pdt_id from tb_promoteProduct where act_id= :actId and pmtpdt_status='0')";
+		String sql = "select * from tb_product where pdt_id in(select pdt_id from tb_promoteProduct where act_id= :actId and pmtpdt_status='0')";
 		params.put("actId", actId);
 
-		List<Product> list = execOrderDAO.find(hql, params);
+		List<Product> list = (List<Product>) execOrderDAO.findEntityBySql(sql, params, Product.class);
 		return list;
 	}
 
