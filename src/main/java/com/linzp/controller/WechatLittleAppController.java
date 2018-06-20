@@ -29,10 +29,21 @@ public class WechatLittleAppController {
         }
         String url = String.format(Constants.WECHAT_GET_OPENID_URL, appid, secret, jsCode, grantType);
         String data = HttpUtil.get(url);
-        logger.info("data="+data);
         JSONObject jsonData = new JSONObject();
         jsonData.put("data", data);
 
         return jsonData.toString();
+    }
+    
+    @ResponseBody
+    @RequestMapping(value = "/getNumber", method = RequestMethod.GET)
+    public String getNumber(HttpServletRequest request) {
+    	String stNum = request.getParameter("stnum");
+    	String url = String.format("http://119.23.221.161:8090/getNumber?stnum=%s", stNum);
+    	String data = HttpUtil.get(url);
+    	JSONObject jsonData = new JSONObject();
+    	jsonData.put("data", data);
+    	
+    	return jsonData.toString();
     }
 }
