@@ -50,6 +50,20 @@ public class IndexController {
 	}
 	
 	@ResponseBody
+	@RequestMapping(value = { "/getActListByPage" }, method = { RequestMethod.GET })
+	public String getActListByPage(int count, String fromApp, int page, int rows ,HttpServletRequest request, HttpServletResponse response) throws IOException {
+		JSONObject jsonObject = new JSONObject();
+		List<ActivityRole> list = activityInfoService.getActListByPage(fromApp, count, page, rows);
+		if (list == null || list.isEmpty()) {
+			return null;
+		}
+		long conut = list.size();
+		jsonObject.put("rows", list);
+		jsonObject.put("total", conut);
+		return jsonObject.toString();
+	}
+	
+	@ResponseBody
 	@RequestMapping(value = { "/getActContent" }, method = { RequestMethod.GET })
 	public String getActById(String actId, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		JSONObject jsonObject = new JSONObject();
