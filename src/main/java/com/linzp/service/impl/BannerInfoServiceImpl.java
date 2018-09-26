@@ -19,7 +19,7 @@ public class BannerInfoServiceImpl implements BannerInfoService {
 	@Override
 	public List<BannerRole> getBannerList(String fromApp, int count) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String sql = "select * from tb_bannner where forApp =:fromApp and banner_status=0 limit :count";
+		String sql = "select * from tb_banner where forApp =:fromApp and banner_status=0 limit :count";
 		params.put("fromApp", fromApp);
 		params.put("count", count);
 
