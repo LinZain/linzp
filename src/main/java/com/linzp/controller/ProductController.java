@@ -50,7 +50,21 @@ public class ProductController {
         jsonObject.put("total",conut);
         return jsonObject.toString();
     }
-    
+
+    @ResponseBody
+    @RequestMapping(value = { "/getPdtByGroupIdByPage" }, method = { RequestMethod.GET })
+    public String queryListByGroupId(String groupId, int page, int rows,HttpServletRequest request, HttpServletResponse response) throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        List<Product> list = productInfoService.getListByGroupIdByPage(groupId,page,rows);
+        if(list == null || list.isEmpty()){
+            return "error";
+        }
+        long conut = list.size();
+        jsonObject.put("rows",list);
+        jsonObject.put("total",conut);
+        return jsonObject.toString();
+    }
+
     
     @ResponseBody
     @RequestMapping(value = { "/getPdtByActId" }, method = { RequestMethod.GET })

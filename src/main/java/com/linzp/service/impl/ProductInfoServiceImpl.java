@@ -99,6 +99,15 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 		return list;
 	}
 
+	public List<Product> getListByGroupIdByPage(String groupId, int page, int rows){
+		Map<String, Object> params = new HashMap<String, Object>();
+		String hql = "select * from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId)";
+		params.put("groupId", groupId);
+
+		List<Product> list = (List<Product>) execOrderDAO.findEntityBySql(hql,params,Product.class,page,rows);
+		return list;
+	}
+
 	@Override
 	public List<Product> getListByActId(String actId) {
 		Map<String, Object> params = new HashMap<String, Object>();
