@@ -17,7 +17,7 @@ public class ActivityInfoServiceImpl implements ActivityInfoService {
 	private BaseDaoI<ActivityRole> execOrderDAO;
 
 	@Override
-	public List<ActivityRole> getActList(String fromApp, int count) {
+	public List<ActivityRole> getActList(String fromApp, String count) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		String hql = "from ActivityRole where forApp = :fromApp and act_status=0 limit :count";
 		params.put("fromApp", fromApp);
@@ -28,14 +28,22 @@ public class ActivityInfoServiceImpl implements ActivityInfoService {
 	}
 	
 	@Override
-	public List<ActivityRole> getActListByPage(String fromApp, int count, int page, int rows) {
+	public List<ActivityRole> getActListByPage(String fromApp, String count, int page, int rows) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "from ActivityRole where forApp = :fromApp and act_status=0 limit :count";
+		String hql = "from ActivityRole where forApp = :fromApp and act_status = 0";
 		params.put("fromApp", fromApp);
-		params.put("count", count);
-		
+
 		List<ActivityRole> list = execOrderDAO.find(hql, params,page,rows);
 		return list;
+	}
+
+	@Override
+	public Long countActListByPage(String fromApp) {
+		Map<String, Object> params = new HashMap<String, Object>();
+		String hql = "select count(*) from ActivityRole where forApp = :fromApp and act_status = 0";
+		params.put("fromApp", fromApp);
+
+		return execOrderDAO.count(hql, params);
 	}
 
 	@Override

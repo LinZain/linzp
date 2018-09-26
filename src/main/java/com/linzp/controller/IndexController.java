@@ -37,13 +37,13 @@ public class IndexController {
 
 	@ResponseBody
 	@RequestMapping(value = { "/getActList" }, method = { RequestMethod.GET })
-	public String getActList(int count, String fromApp, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String getActList(String count, String fromApp, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		JSONObject jsonObject = new JSONObject();
 		List<ActivityRole> list = activityInfoService.getActList(fromApp, count);
 		if (list == null || list.isEmpty()) {
 			return null;
 		}
-		long conut = list.size();
+		long conut = activityInfoService.countActListByPage(fromApp);
 		jsonObject.put("rows", list);
 		jsonObject.put("total", conut);
 		return jsonObject.toString();
@@ -51,13 +51,13 @@ public class IndexController {
 	
 	@ResponseBody
 	@RequestMapping(value = { "/getActListByPage" }, method = { RequestMethod.GET })
-	public String getActListByPage(int count, String fromApp, int page, int rows ,HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String getActListByPage(String count, String fromApp, int page, int rows ,HttpServletRequest request, HttpServletResponse response) throws IOException {
 		JSONObject jsonObject = new JSONObject();
 		List<ActivityRole> list = activityInfoService.getActListByPage(fromApp, count, page, rows);
 		if (list == null || list.isEmpty()) {
 			return null;
 		}
-		long conut = list.size();
+		long conut = activityInfoService.countActListByPage(fromApp);
 		jsonObject.put("rows", list);
 		jsonObject.put("total", conut);
 		return jsonObject.toString();
