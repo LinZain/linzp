@@ -19,11 +19,11 @@ public class BannerInfoServiceImpl implements BannerInfoService {
 	@Override
 	public List<BannerRole> getBannerList(String fromApp, int count) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String sql = "from BannerRole where forApp =:fromApp and banner_status=0 limit :count";
+		String sql = "select * from tb_bannner where forApp =:fromApp and banner_status=0 limit :count";
 		params.put("fromApp", fromApp);
 		params.put("count", count);
 
-		List<BannerRole> list = execOrderDAO.find(sql, params);
+		List<BannerRole> list = (List<BannerRole>) execOrderDAO.findEntityBySql(sql, params,BannerRole.class);
 		return list;
 	}
 
