@@ -1,5 +1,6 @@
 package com.linzp.service.impl;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -106,6 +107,14 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
 		List<Product> list = (List<Product>) execOrderDAO.findEntityBySql(hql,params,Product.class,page,rows);
 		return list;
+	}
+
+	public BigInteger countListByGroupId(String groupId){
+		Map<String, Object> params = new HashMap<String, Object>();
+		String hql = "select count(*) from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId)";
+		params.put("groupId", groupId);
+
+		return execOrderDAO.countBySql(hql,params);
 	}
 
 	@Override

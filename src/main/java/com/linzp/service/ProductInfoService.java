@@ -1,5 +1,6 @@
 package com.linzp.service;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import com.linzp.entity.Product;
@@ -12,6 +13,7 @@ public interface ProductInfoService {
     public List<Product> getListByGroupId(String groupId);
 
     public List<Product> getListByGroupIdByPage(String groupId, int page, int rows);
+    public BigInteger countListByGroupId(String groupId);
 
     public List<Product> getListByActId(String actId);
 }

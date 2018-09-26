@@ -45,7 +45,7 @@ public class ProductController {
         if(list == null || list.isEmpty()){
             return "error";
         }
-        long conut = list.size();
+        long conut = productInfoService.countListByGroupId(groupId).longValue();
         jsonObject.put("rows",list);
         jsonObject.put("total",conut);
         return jsonObject.toString();
@@ -59,7 +59,7 @@ public class ProductController {
         if(list == null || list.isEmpty()){
             return "error";
         }
-        long conut = list.size();
+        long conut = productInfoService.countListByGroupId(groupId).longValue();
         jsonObject.put("rows",list);
         jsonObject.put("total",conut);
         return jsonObject.toString();
