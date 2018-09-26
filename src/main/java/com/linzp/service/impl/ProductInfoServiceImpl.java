@@ -92,14 +92,13 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
 	public List<Product> getListByGroupId(String groupId) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "from Product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId)";
+		String hql = "select * from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId)";
 		params.put("groupId", groupId);
 
-		List<Product> list = execOrderDAO.find(hql, params);
+		List<Product> list = (List<Product>) execOrderDAO.findEntityBySql(hql, params,Product.class);
 		return list;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<Product> getListByActId(String actId) {
 		Map<String, Object> params = new HashMap<String, Object>();
