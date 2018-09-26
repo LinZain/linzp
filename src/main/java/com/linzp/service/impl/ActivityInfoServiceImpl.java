@@ -19,11 +19,11 @@ public class ActivityInfoServiceImpl implements ActivityInfoService {
 	@Override
 	public List<ActivityRole> getActList(String fromApp, String count) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "from ActivityRole where forApp = :fromApp and act_status=0 limit :count";
+		String hql = "select * from tb_activity where forApp = :fromApp and act_status=0 limit :count";
 		params.put("fromApp", fromApp);
 		params.put("count", count);
 
-		List<ActivityRole> list = execOrderDAO.find(hql, params);
+		List<ActivityRole> list = (List<ActivityRole>) execOrderDAO.findEntityBySql(hql, params,ActivityRole.class);
 		return list;
 	}
 	
