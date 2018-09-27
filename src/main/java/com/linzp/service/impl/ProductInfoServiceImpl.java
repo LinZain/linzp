@@ -98,15 +98,15 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
         if (StringUtils.isNotBlank(pdtTitle)) {
             hql += "and pdt_title like :pdtTitle";
-            params.put("pdtTitle", pdtTitle);
+            params.put("pdtTitle", "%" + pdtTitle + "%");
         }
         if (StringUtils.isNotBlank(pdtBrand)) {
             hql += "and pdt_brand like :pdtBrand";
-            params.put("pdtBrand", pdtBrand);
+            params.put("pdtBrand", "%" + pdtBrand + "%");
         }
         if (StringUtils.isNotBlank(pdtCategory)) {
             hql += "and pdt_category like :pdtCategory";
-            params.put("pdtCategory", pdtCategory);
+            params.put("pdtCategory", "%" + pdtCategory + "%");
         }
 
         hql += " and pdt_status = 0 order by pdt_weight desc";
@@ -122,15 +122,15 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
         if (StringUtils.isNotBlank(pdtTitle)) {
             hql += "and pdt_title like :pdtTitle";
-            params.put("pdtTitle", pdtTitle);
+            params.put("pdtTitle", "%" + pdtTitle + "%");
         }
         if (StringUtils.isNotBlank(pdtBrand)) {
             hql += "and pdt_brand like :pdtBrand";
-            params.put("pdtBrand", pdtBrand);
+            params.put("pdtBrand", "%" + pdtBrand + "%");
         }
         if (StringUtils.isNotBlank(pdtCategory)) {
-            hql += "and pdt_category like :pdt_category";
-            params.put("pdt_category", pdtCategory);
+            hql += "and pdt_category like :pdtCategory";
+            params.put("pdtCategory", "%" + pdtCategory + "%");
         }
 
         hql += " and pdt_status = 0 order by pdt_weight desc";
@@ -146,15 +146,15 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
         if (StringUtils.isNotBlank(pdtTitle)) {
             hql += "and pdt_title like :pdtTitle";
-            params.put("pdtTitle", pdtTitle);
+            params.put("pdtTitle", "%" + pdtTitle + "%");
         }
         if (StringUtils.isNotBlank(pdtBrand)) {
             hql += "and pdt_brand like :pdtBrand";
-            params.put("pdtBrand", pdtBrand);
+            params.put("pdtBrand", "%" + pdtBrand + "%");
         }
         if (StringUtils.isNotBlank(pdtCategory)) {
             hql += "and pdt_category like :pdtCategory";
-            params.put("pdtCategory", pdtCategory);
+            params.put("pdtCategory", "%" + pdtCategory + "%");
         }
 
         hql += " and pdt_status = 0 order by pdt_weight desc";
