@@ -3,6 +3,7 @@ package com.linzp.util;
 import java.io.IOException;
 import java.util.Enumeration;
 
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -10,8 +11,10 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class FilterUtil implements Filter {
+
     public void destroy() {
         // TODO Auto-generated method stub
     }
@@ -20,39 +23,41 @@ public class FilterUtil implements Filter {
         // TODO Auto-generated method stub
     }
 
-    public void doFilter(ServletRequest args0, ServletResponse args1, FilterChain chain) throws IOException, ServletException {
-        HttpServletRequest req = (HttpServletRequest) args0;
-        //»ñµÃËùÓĞÇëÇó²ÎÊıÃû
-        Enumeration<?> params = req.getParameterNames();
+    public void doFilter(ServletRequest args0, ServletResponse args1,
+                         FilterChain chain) throws IOException, ServletException {
+        HttpServletRequest req=(HttpServletRequest)args0;
+        HttpServletResponse res=(HttpServletResponse)args1;
+        //è·å¾—æ‰€æœ‰è¯·æ±‚å‚æ•°å
+        Enumeration params = req.getParameterNames();
         String sql = "";
         while (params.hasMoreElements()) {
-            //µÃµ½²ÎÊıÃû
+            //å¾—åˆ°å‚æ•°å
             String name = params.nextElement().toString();
             //System.out.println("name===========================" + name + "--");
-            //µÃµ½²ÎÊı¶ÔÓ¦Öµ
+            //å¾—åˆ°å‚æ•°å¯¹åº”å€¼
             String[] value = req.getParameterValues(name);
             for (int i = 0; i < value.length; i++) {
                 sql = sql + value[i];
             }
         }
         //System.out.println("============================SQL"+sql);
-        //ÓĞsql¹Ø¼ü×Ö£¬Ìø×ªµ½error.html
+        //æœ‰sqlå…³é”®å­—ï¼Œè·³è½¬åˆ°error.html
         if (sqlValidate(sql)) {
-            throw new IOException("Äú·¢ËÍÇëÇóÖĞµÄ²ÎÊıÖĞº¬ÓĞ·Ç·¨×Ö·û");
+            throw new IOException("æ‚¨å‘é€è¯·æ±‚ä¸­çš„å‚æ•°ä¸­å«æœ‰éæ³•å­—ç¬¦");
             //String ip = req.getRemoteAddr();
         } else {
-            chain.doFilter(args0, args1);
+            chain.doFilter(args0,args1);
         }
     }
 
-    //Ğ§Ñé
+    //æ•ˆéªŒ
     protected static boolean sqlValidate(String str) {
-        str = str.toLowerCase();//Í³Ò»×ªÎªĞ¡Ğ´
-        String badStr = "'|and|exec|execute|insert|select|delete|update|count|drop|*|%|chr|mid|master|truncate|"
-                + "char|declare|sitename|net user|xp_cmdshell|;|or|-|+|,|like'|and|exec|execute|insert|create|drop|"
-                + "table|from|grant|use|group_concat|column_name|"
-                + "information_schema.columns|table_schema|union|where|select|delete|update|order|by|count|*|"
-                + "chr|mid|master|truncate|char|declare|or|;|-|--|+|,|like|//|/|%|#";//¹ıÂËµôµÄsql¹Ø¼ü×Ö£¬¿ÉÒÔÊÖ¶¯Ìí¼Ó
+        str = str.toLowerCase();//ç»Ÿä¸€è½¬ä¸ºå°å†™
+        String badStr = "'|and|exec|execute|insert|select|delete|update|count|drop|*|%|chr|mid|master|truncate|" +
+                "char|declare|sitename|net user|xp_cmdshell|;|or|-|+|like'|and|exec|execute|insert|create|drop|" +
+                "table|from|grant|use|group_concat|column_name|" +
+                "information_schema.columns|table_schema|union|where|select|delete|update|order|by|count|*|" +
+                "chr|mid|master|truncate|char|declare|or|;|-|--|+|like|//|/|%|#";//è¿‡æ»¤æ‰çš„sqlå…³é”®å­—ï¼Œå¯ä»¥æ‰‹åŠ¨æ·»åŠ 
         String[] badStrs = badStr.split("\\|");
         for (int i = 0; i < badStrs.length; i++) {
             if (str.indexOf(badStrs[i]) >= 0) {
