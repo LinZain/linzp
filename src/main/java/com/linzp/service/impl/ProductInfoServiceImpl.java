@@ -93,7 +93,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
 	public List<Product> getListByGroupId(String groupId) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "select * from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId)";
+		String hql = "select * from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id in (:groupId)) order by pdt_weight desc";
 		params.put("groupId", groupId);
 
 		List<Product> list = (List<Product>) execOrderDAO.findEntityBySql(hql, params,Product.class);
@@ -102,7 +102,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
 	public List<Product> getListByGroupIdByPage(String groupId, int page, int rows){
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "select * from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId)";
+		String hql = "select * from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id in (:groupId)) order by pdt_weight desc";
 		params.put("groupId", groupId);
 
 		List<Product> list = (List<Product>) execOrderDAO.findEntityBySql(hql,params,Product.class,page,rows);
@@ -111,7 +111,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
 	public BigInteger countListByGroupId(String groupId){
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "select count(*) from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id= :groupId)";
+		String hql = "select count(*) from tb_product where pdt_id in (select pdt_id from tb_groupNumber where group_id in (:groupId))";
 		params.put("groupId", groupId);
 
 		return execOrderDAO.countBySql(hql,params);
