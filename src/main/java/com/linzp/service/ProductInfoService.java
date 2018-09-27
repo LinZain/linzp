@@ -10,10 +10,10 @@ public interface ProductInfoService {
 
     public Long getListCount(Product role);
 
-    public List<Product> getListByGroupId(String groupId);
+    public List<Product> getListByGroupId(String groupId , String pdtTitle,String pdtBrand, String pdtCategoyr);
 
-    public List<Product> getListByGroupIdByPage(String groupId, int page, int rows);
-    public BigInteger countListByGroupId(String groupId);
+    public List<Product> getListByGroupIdByPage(String groupId,String pdtTitle,String pdtBrand, String pdtCategoyr,int page, int rows);
+    public BigInteger countListByGroupId(String groupId , String pdtTitle,String pdtBrand, String pdtCategoyr);
 
     public List<Product> getListByActId(String actId);
 }

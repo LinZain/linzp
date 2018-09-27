@@ -18,66 +18,66 @@ import com.linzp.service.ProductInfoService;
 import net.sf.json.JSONObject;
 
 @Controller
-@RequestMapping(value="/pdt")
+@RequestMapping(value = "/pdt")
 public class ProductController {
     @Autowired
     ProductInfoService productInfoService;
 
     @ResponseBody
-    @RequestMapping(value = { "/getPdt" }, method = { RequestMethod.GET })
+    @RequestMapping(value = {"/getPdt"}, method = {RequestMethod.GET})
     public String queryList(Product role, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject jsonObject = new JSONObject();
         List<Product> list = productInfoService.queryList(role);
-        if(list == null || list.isEmpty()){
+        if (list == null || list.isEmpty()) {
             return "error";
         }
         long conut = productInfoService.getListCount(role);
-        jsonObject.put("rows",list);
-        jsonObject.put("total",conut);
-        return jsonObject.toString();
-    }
-    
-    @ResponseBody
-    @RequestMapping(value = { "/getPdtByGroupId" }, method = { RequestMethod.GET })
-    public String queryListByGroupId(String groupId, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        JSONObject jsonObject = new JSONObject();
-        List<Product> list = productInfoService.getListByGroupId(groupId);
-        if(list == null || list.isEmpty()){
-            return "error";
-        }
-        long conut = productInfoService.countListByGroupId(groupId).longValue();
-        jsonObject.put("rows",list);
-        jsonObject.put("total",conut);
+        jsonObject.put("rows", list);
+        jsonObject.put("total", conut);
         return jsonObject.toString();
     }
 
     @ResponseBody
-    @RequestMapping(value = { "/getPdtByGroupIdByPage" }, method = { RequestMethod.GET })
-    public String queryListByGroupId(String groupId, int page, int rows,HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @RequestMapping(value = {"/getPdtByGroupId"}, method = {RequestMethod.GET})
+    public String queryListByGroupId(String groupId, String pdtTitle, String pdtBrand, String pdtCategoyr, HttpServletRequest request, HttpServletResponse response) throws IOException {
         JSONObject jsonObject = new JSONObject();
-        List<Product> list = productInfoService.getListByGroupIdByPage(groupId,page,rows);
-        if(list == null || list.isEmpty()){
+        List<Product> list = productInfoService.getListByGroupId(groupId, pdtTitle, pdtBrand, pdtCategoyr);
+        if (list == null || list.isEmpty()) {
             return "error";
         }
-        long conut = productInfoService.countListByGroupId(groupId).longValue();
-        jsonObject.put("rows",list);
-        jsonObject.put("total",conut);
+        long conut = productInfoService.countListByGroupId(groupId, pdtTitle, pdtBrand, pdtCategoyr).longValue();
+        jsonObject.put("rows", list);
+        jsonObject.put("total", conut);
         return jsonObject.toString();
     }
 
-    
     @ResponseBody
-    @RequestMapping(value = { "/getPdtByActId" }, method = { RequestMethod.GET })
+    @RequestMapping(value = {"/getPdtByGroupIdByPage"}, method = {RequestMethod.GET})
+    public String queryListByGroupId(String groupId, String pdtTitle, String pdtBrand, String pdtCategory, int page, int rows, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        List<Product> list = productInfoService.getListByGroupIdByPage(groupId, pdtTitle, pdtBrand, pdtCategory, page, rows);
+        if (list == null || list.isEmpty()) {
+            return "error";
+        }
+        long conut = productInfoService.countListByGroupId(groupId, pdtTitle, pdtBrand, pdtCategory).longValue();
+        jsonObject.put("rows", list);
+        jsonObject.put("total", conut);
+        return jsonObject.toString();
+    }
+
+
+    @ResponseBody
+    @RequestMapping(value = {"/getPdtByActId"}, method = {RequestMethod.GET})
     public String queryListByActId(String actId, HttpServletRequest request, HttpServletResponse response) throws IOException {
-    	JSONObject jsonObject = new JSONObject();
-    	List<Product> list = productInfoService.getListByActId(actId);
-    	if(list == null || list.isEmpty()){
-    		return "error";
-    	}
-    	long conut = list.size();
-    	jsonObject.put("rows",list);
-    	jsonObject.put("total",conut);
-    	return jsonObject.toString();
+        JSONObject jsonObject = new JSONObject();
+        List<Product> list = productInfoService.getListByActId(actId);
+        if (list == null || list.isEmpty()) {
+            return "error";
+        }
+        long conut = list.size();
+        jsonObject.put("rows", list);
+        jsonObject.put("total", conut);
+        return jsonObject.toString();
     }
-    
+
 }
