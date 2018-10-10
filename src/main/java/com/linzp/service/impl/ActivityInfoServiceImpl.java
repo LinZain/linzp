@@ -30,7 +30,7 @@ public class ActivityInfoServiceImpl implements ActivityInfoService {
 	@Override
 	public List<ActivityRole> getActListByPage(String fromApp, String count, int page, int rows) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "from ActivityRole where forApp = :fromApp and act_status = 0";
+		String hql = "from ActivityRole where forApp = :fromApp and act_status = 0 order by act_time";
 		params.put("fromApp", fromApp);
 
 		List<ActivityRole> list = execOrderDAO.find(hql, params,page,rows);
@@ -40,7 +40,7 @@ public class ActivityInfoServiceImpl implements ActivityInfoService {
 	@Override
 	public Long countActListByPage(String fromApp) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		String hql = "select count(*) from ActivityRole where forApp = :fromApp and act_status = 0";
+		String hql = "select count(*) from ActivityRole where forApp = :fromApp and act_status = 0 order by act_time";
 		params.put("fromApp", fromApp);
 
 		return execOrderDAO.count(hql, params);

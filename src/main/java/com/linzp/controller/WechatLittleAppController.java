@@ -42,7 +42,7 @@ public class WechatLittleAppController {
 	public String getNumber(HttpServletRequest request) {
 		String stNum = null;
 		try {
-			stNum = new String(request.getParameter("stnum").getBytes("utf-8"), "utf-8");
+			stNum = new String(request.getParameter("stnum").getBytes("ISO-8859-1"), "utf-8");
 
 			String url = String.format("http://119.23.221.161:8090/getNumber?stnum=%s", stNum);
 			String data = HttpUtil.get(url);
